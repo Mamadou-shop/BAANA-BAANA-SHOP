@@ -1,0 +1,460 @@
+html {
+    scroll-behavior: smooth;
+}
+/* Design de la Barre de Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 15px 50px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.logo span { color: #27ae60; }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Design de la Bannière Hero */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.btn-hero {
+    background: #27ae60;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+}/* 1. Base du site */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* 2. La Grille (Organisation horizontale) */
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 3. Les Cartes Produits (Taille harmonisée) */
+.product-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+ /* On force la hauteur pour que tout soit aligné */
+    height: 420px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* L'ombre devient plus forte */
+}
+
+
+/* Couleurs officielles au survol */
+.social-icon.whatsapp:hover { background-color: #25D366; }
+.social-icon.tiktok:hover { background-color: #000000; }
+.social-icon.instagram:hover { background-color: #E1306C; }
+.social-icon.facebook:hover { background-color: #1877F2; }
+
+/* Pour que l'image devienne blanche quand on survole le cercle */
+.social-icon:hover img {
+    filter: brightness(0) invert(1);
+}
+
+
+/* --- Boutons de Réseaux Sociaux Flottants --- */
+.social-sidebar {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+/* 4. Gestion des images (Pour le sac et les iPhones) */
+.product-card img {
+    width: 100%;
+    height: 180px; /* Hauteur fixe pour toutes les images */
+    object-fit: contain; /* Empêche l'image de déborder ou de s'étirer */
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* 5. Textes et Boutons */
+.product-card h3 {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    height: 2.4em; /* Garde le titre sur 2 lignes max */
+    overflow: hidden;
+}
+
+.price {
+    font-size: 1.2rem;
+    color: #27ae60;
+    font-weight: bold;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/* --- SECTION RÉSEAUX SOCIAUX FLOTTANTS --- */
+.social-sidebar {
+    position: fixed;
+    right: 20px;
+    bottom: 30%; /* Positionné sur le côté droit */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 9999; /* Pour passer par-dessus les images des produits */
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon img {
+    width: 28px;
+    height: 28px;
+}
+
+/* Couleurs au survol pour faire plus pro */
+.whatsapp:hover { background-color: #25D366; }
+.tiktok:hover { background-color: #000000; }
+.instagram:hover { background-color: #E1306C; }
+.facebook:hover { background-color: #1877F2; }
+
+.social-icon:hover {
+    transform: scale(1.1) translateX(-5px); /* L'icône grossit et se décale vers la gauche */
+}
+
+/* Style pour le bouton Remonter */
+#backToTop {
+    position: fixed;
+    right: 20px;       /* Place le bouton à DROITE */
+    bottom: 20px;      /* Place le bouton en BAS */
+    display: none;     /* Caché au chargement, le JS le fera apparaître */
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    font-size: 20px;
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+
+#backToTop:hover {
+    transform: scale(1.1);
+    background-color: #219150;
+}
+
+/* --- CODE POUR LA FENÊTRE DE PAIEMENT --- */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 9999; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 25px;
+    border-radius: 12px;
+    width: 85%;
+    max-width: 400px;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.close {
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #000;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: 2px solid #27ae60;
+    background: transparent;
+    color: #27ae60;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: #27ae60;
+    color: white;
+}
+
+/* Pour que le défilement s'arrête avec un peu d'espace en haut */
+#contact {
+    scroll-margin-top: 100px;
+}
+
+/* Optionnel : Si tu veux que la zone de contact soit plus visible */
+.social-sidebar {
+    transition: all 0.3s ease;
+}
+
+/* Petit effet quand on arrive sur la zone (optionnel) */
+.social-sidebar:target {
+    transform: scale(1.1);
+    background-color: rgba(39, 174, 96, 0.1);
+    border-radius: 10px;
+}
+
+h2 {
+    margin-left: 50px; /* C'est ce chiffre qui décale le texte vers la droite */
+    margin-top: 30px;  /* Pour donner un peu d'espace avec les boutons au-dessus */
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    color: #333;
+}
+
+/* Style pour le petit chiffre rouge du panier */
+#cart-count {
+    background-color: #e74c3c; /* Rouge pour qu'il soit bien visible */
+    color: white;              /* Chiffre en blanc */
+    border-radius: 50%;        /* Forme un cercle */
+    padding: 2px 7px;          /* Espace autour du chiffre */
+    font-size: 14px;           /* Taille du chiffre */
+    font-weight: bold;         /* Texte épais */
+    position: relative;        /* Permet de le décaler un peu */
+    top: -10px;                /* Le fait monter un peu au-dessus du chariot */
+    left: -5px;                /* Le colle un peu au chariot */
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close { float: right; cursor: pointer; font-size: 24px; }
+
+#confirm-order {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* --- STYLE DE LA FENÊTRE DE PAIEMENT --- */
+.modal {
+    display: none; /* Caché par défaut */
+    position: fixed; 
+    z-index: 9999; /* Passe devant tout le reste */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6); /* Fond sombre transparent */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+}
+
+#confirm-order {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    margin-top: 20px;
+    width: 100%;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.product-card h3, .product-card p {
+    margin: 10px 0;
+    min-height: 1.2em; /* Réserve l'espace pour que le texte ne saute pas */
+    backface-visibility: hidden;
+    transform: translateZ(0); /* Stabilise le rendu sur Chrome */
+}
+
+.product-card img {
+    min-height: 200px; /* Empêche la carte de changer de taille si l'image met du temps à charger */
+}
+#shop-container {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 800px; /* Réserve l'espace pour éviter que la page ne saute */
+    align-items: flex-start;
+}
+
+.product-card {
+    height: 450px; /* Force une hauteur identique pour toutes les cartes */
+    overflow: hidden;
+}
+
+/* Empêche les éléments de bouger pendant le chargement */
+#shop-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    min-height: 100vh; /* Garde une hauteur fixe */
+}
+
+.product-card h3 {
+    height: 1.5em; /* Bloque la hauteur du nom de l'iPhone */
+    overflow: hidden;
+    margin-bottom: 5px;
+}

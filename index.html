@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Baana-Baana Shop.SN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+    <div class="logo">BAANA-BAANA <span>SHOP</span></div>
+
+    <ul class="nav-links">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#produits">Téléphones</a></li>
+        <li><a href="#produits">Mode</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="cart-icon">
+        🛒 <span id="cart-count">0</span>
+    </div>
+</nav>
+</header>
+<section class="hero">
+    <section class="hero" id="accueil"></section>
+    <div class="hero-content">
+        <h1>Le Style à Portée de Main</h1>
+        <p>Découvrez les dernières tendances iPhone et Mode au Sénégal.</p>
+        <button class="btn-hero">Voir la collection</button>
+    </div>
+</section>
+
+
+<main class="container">
+<main class="container" id="produits"></main>
+<div class="filter-container">
+    <button class="filter-btn active" data-category="tous">Tous</button>
+    <button class="filter-btn" data-category="telephone">iPhones</button>
+    <button class="filter-btn" data-category="habillement">Vêtements</button>
+    <button class="filter-btn" data-category="accessoires">Accessoires</button>
+    <button class="filter-btn" data-category="chaussures">Chaussures</button>
+</div>
+
+    <h2>Nos Produits</h2>
+    <div id="shop-container" class="shop-grid"></div>
+</main>
+
+
+    
+
+<div class="social-sidebar" id="contact">
+    <a href="https://wa.me/221777226359" class="social-icon whatsapp" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+    <a href="https://tiktok.com/https://www.tiktok.com/@mdou282?_r=1&_t=ZP-92ki1JwjFFe" class="social-icon tiktok" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok">
+    </a>
+    <a href="https://instagram.com/https://www.instagram.com/ahmedgneid?igsh=MW0zN21ydTZrczA2Nw==" class="social-icon instagram" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram">
+    </a>
+    <a href="https://facebook.com/https://www.facebook.com/share/1A6fjAsyXF/" class="social-icon facebook" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+    </a>
+</div>
+ 
+
+    <button id="backToTop" title="Remonter">↑</button>
+
+    
+
+
+
+<div id="payment-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Résumé de votre commande</h2>
+        <p id="order-details"></p>
+        <hr>
+        <p><strong>Payez via :</strong> <span id="payment-method-display"></span></p>
+        <p>Envoyez le montant total au : <strong>77 000 0000</strong></p>
+        <button id="confirm-order" onclick="alert('Merci ! Votre commande est en cours de traitement.')">J'ai effectué le paiement</button>
+    </div>
+</div>
+ <script src="script.js"></script>
+
+</body>
+</html>
