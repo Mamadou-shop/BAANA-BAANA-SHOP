@@ -149,3 +149,25 @@ filterBtns.forEach(btn => {
 });
 // Lancer le chargement
 window.onload = chargerProduits;
+
+// Fonction pour gérer le bouton de confirmation du paiement
+function confirmerPaiement() {
+    const nom = document.getElementById('nomProduit').innerText;
+    const prixStr = document.getElementById('prixProduit').innerText;
+    const methode = document.getElementById('methodePaiement').value;
+    const monNumero = "777226359"; // <--- METS TON VRAI NUMÉRO ICI
+
+    // On récupère juste le chiffre du prix
+    const prix = parseInt(prixStr.replace(/\s/g, ''));
+
+    if (methode === "Wave") {
+        // Redirection vers l'application Wave
+        window.location.href = `https://wave.com/pay/${monNumero}?amount=${prix}`;
+    } else {
+        // Redirection vers WhatsApp pour Orange Money
+        const message = `Bonjour Boutique Mamadou, je souhaite payer ${nom} (${prix} FCFA) par Orange Money.`;
+        window.location.href = `https://wa.me/${monNumero}?text=${encodeURIComponent(message)}`;
+    }
+}
+
+
