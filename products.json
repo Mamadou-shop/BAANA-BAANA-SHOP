@@ -5,18 +5,19 @@
   { "id": 4, "nom": "iPhone 11 Pro", "categorie": "iphones", "prix": 280000, "image": "iphone11pro.jpg" },
   { "id": 5, "nom": "iPhone 12", "categorie": "iphones", "prix": 320000, "image": "iphone12.jpg" },
   { "id": 6, "nom": "iPhone 12 Mini", "categorie": "iphones", "prix": 290000, "image": "iphone12mini.jpg" },
-  { "id": 7, "nom": "iPhone 13", "categorie": "iphones", "prix": 450000, "image": "iphone13.jpg" },
-  { "id": 8, "nom": "Sac à dos", "categorie": "accessoires", "prix": 15000, "image": "sac-dos.jpg" },
+  { "id": 7, "nom": "iPhone 13", "categorie": "iphones", "prix": 350000, "image": "iphone13.jpg" },
+  { "id": 8, "nom": "Sac à dos", "categorie": "accessoires", "prix": 12000, "image": "sac-dos.jpg" },
   { "id": 9, "nom": "Tee-shirt Homme", "categorie": "vetements", "prix": 5000, "image": "tshirt-homme.jpg" },
   { "id": 10, "nom": "Tee-shirt Femme", "categorie": "vetements", "prix": 5000, "image": "tshirt-femme.jpg" },
   { "id": 11, "nom": "Robe", "categorie": "vetements", "prix": 15000, "image": "robe.jpg" },
-  { "id": 12, "nom": "Sac à main", "categorie": "accessoires", "prix": 20000, "image": "sac-main.jpg" },
+  { "id": 12, "nom": "Sac à main", "categorie": "accessoires", "prix": 15000, "image": "sac-main.jpg" },
   { "id": 13, "nom": "Jean Homme", "categorie": "vetements", "prix": 5000, "image": "jean-homme.jpg" },
   { "id": 14, "nom": "Jean Femme", "categorie": "vetements", "prix": 5000, "image": "jean-femme.jpg" },
-  { "id": 15, "nom": "Montre Homme", "categorie": "accessoires", "prix": 25000, "image": "montre-homme.jpg" },
+  { "id": 15, "nom": "Montre Homme", "categorie": "accessoires", "prix": 10000, "image": "montre-homme.jpg" },
   { "id": 16, "nom": "Montre Femme", "categorie": "accessoires", "prix": 5000, "image": "montre-femme.jpg" },
   { "id": 17, "nom": "Chaussure Homme", "categorie": "chaussures", "prix": 30000, "image": "chaussure-h.jpg" },
   { "id": 18, "nom": "Chaussure Femme", "categorie": "chaussures", "prix": 10000, "image": "chaussure-f.jpg" },
   { "id": 19, "nom": "Lunette Homme", "categorie": "accessoires", "prix": 3000, "image": "lunette-h.jpg" },
   { "id": 20, "nom": "Lunette Femme", "categorie": "accessoires", "prix": 10000, "image": "lunette-f.jpg" }
 ]
+
