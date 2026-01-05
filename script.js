@@ -150,28 +150,22 @@ filterBtns.forEach(btn => {
 // Lancer le chargement
 window.onload = chargerProduits;
 
-// Fonction pour le paiement
 function confirmerPaiement() {
     const details = document.getElementById('order-details').innerText;
-    
-    // On garde seulement les chiffres du prix
     const prixChiffre = details.replace(/[^\d]/g, '');
-    
-    // On récupère la méthode choisie
-    const methode = document.getElementById('payment-method-display').innerText.toUpperCase();
-    
     const monNumero = "777226359"; 
+    
+    // Tentative d'ouverture directe de Wave
+    window.location.href = "https://wave.com/pay/" + monNumero + "?amount=" + prixChiffre;
 
-    if (methode.includes("WAVE")) {
-        // Redirection vers Wave
-        window.location.href = "https://wave.com/pay/" + monNumero + "?amount=" + prixChiffre;
-    } else {
-        // Redirection vers WhatsApp pour Orange Money
-        const message = "Bonjour Boutique Mamadou, je souhaite payer " + prixChiffre + " FCFA par Orange Money.";
-        window.location.href = "https://wa.me/" + monNumero + "?text=" + encodeURIComponent(message);
-    }
+    // Sécurité : Si après 3 secondes rien ne se passe, on propose WhatsApp
+    setTimeout(function() {
+        if (confirm("Si l'application Wave ne s'est pas ouverte, voulez-vous finaliser la commande sur WhatsApp ?")) {
+            const message = "Bonjour, je souhaite payer " + prixChiffre + " FCFA pour ma commande.";
+            window.location.href = "https://wa.me/" + monNumero + "?text=" + encodeURIComponent(message);
+        }
+    }, 3000);
 }
-
 
 
 
