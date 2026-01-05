@@ -169,6 +169,12 @@ function payerOrangeMoney() {
     window.location.href = "https://wa.me/" + monNumeroOM + "?text=" + encodeURIComponent(message);
 }
 
+function afficherQROrange() {
+    // Cache les boutons et montre le QR Code
+    document.getElementById('qr-container').style.display = 'block';
+    document.getElementById('confirm-order').style.display = 'none';
+    document.getElementById('om-button').style.display = 'none';
+}
 
 
 
