@@ -151,22 +151,13 @@ filterBtns.forEach(btn => {
 window.onload = chargerProduits;
 
 function confirmerPaiement() {
-    const details = document.getElementById('order-details').innerText;
-    const prixChiffre = details.replace(/[^\d]/g, '');
-    const monNumero = "777226359"; 
-    
-    // Tentative d'ouverture directe de Wave
-    window.location.href = "https://wave.com/pay/" + monNumero + "?amount=" + prixChiffre;
+    // Ton lien officiel Wave Business
+    const lienWaveBusiness = "https://pay.wave.com/m/M_sn_oPpmOm67pxb4/c/sn/";
+
+    // Redirection vers la page de paiement officielle
+    window.location.href = lienWaveBusiness;
 }
 
-    // Sécurité : Si après 3 secondes rien ne se passe, on propose WhatsApp
-    setTimeout(function() {
-        if (confirm("Si l'application Wave ne s'est pas ouverte, voulez-vous finaliser la commande sur WhatsApp ?")) {
-            const message = "Bonjour, je souhaite payer " + prixChiffre + " FCFA pour ma commande.";
-            window.location.href = "https://wa.me/" + monNumero + "?text=" + encodeURIComponent(message);
-        }
-    }, 3000);
-}
 
 
 
