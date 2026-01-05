@@ -151,12 +151,16 @@ filterBtns.forEach(btn => {
 window.onload = chargerProduits;
 
 function confirmerPaiement() {
+    // On récupère le prix pour information, même si le lien Business a parfois un montant fixe
     const details = document.getElementById('order-details').innerText;
     const prixChiffre = details.replace(/[^\d]/g, '');
-    const monNumero = "777226359"; 
     
-    // Tentative d'ouverture directe de Wave
-    window.location.href = "https://wave.com/pay/" + monNumero + "?amount=" + prixChiffre;
+    // TON LIEN OFFICIEL WAVE BUSINESS
+    const lienWaveBusiness = "https://pay.wave.com/m/M_sn_oPpmOm67pxb4/c/sn/";
+
+    // Redirection vers la page de paiement officielle
+    window.location.href = lienWaveBusiness;
+}
 
     // Sécurité : Si après 3 secondes rien ne se passe, on propose WhatsApp
     setTimeout(function() {
@@ -166,6 +170,7 @@ function confirmerPaiement() {
         }
     }, 3000);
 }
+
 
 
 
