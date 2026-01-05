@@ -170,4 +170,24 @@ function confirmerPaiement() {
     }
 }
 
+function confirmerPaiement() {
+    // On récupère le texte du prix (ex: "100000 FCFA")
+    const prixTexte = document.getElementById('prixProduit').innerText;
+    
+    // CETTE LIGNE EST TRÈS IMPORTANTE : elle enlève "FCFA" et les espaces pour ne garder que le chiffre
+    const prixChiffre = prixTexte.replace(/[^\d]/g, ''); 
+    
+    const methode = document.getElementById('payment-method-display').innerText; // On récupère la méthode affichée
+    const monNumero = "777226359"; 
+
+    if (methode === "WAVE") {
+        // Redirection vers Wave avec uniquement le chiffre
+        window.location.href = `https://wave.com/pay/${monNumero}?amount=${prixChiffre}`;
+    } else {
+        // Redirection vers WhatsApp pour Orange Money
+        const nom = document.getElementById('nomProduit').innerText;
+        const message = `Bonjour, je souhaite payer ${nom} (${prixChiffre} FCFA) par Orange Money.`;
+        window.location.href = `https://wa.me/${monNumero}?text=${encodeURIComponent(message)}`;
+    }
+}
 
