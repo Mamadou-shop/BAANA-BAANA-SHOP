@@ -158,6 +158,18 @@ function confirmerPaiement() {
     window.location.href = lienWaveBusiness;
 }
 
+function payerOrangeMoney() {
+    const details = document.getElementById('order-details').innerText;
+    const monNumeroOM = "777226359"; // Ton numéro Orange Money
+    
+    // Message pour t'envoyer la commande et demander ton QR Code
+    const message = "Bonjour BAANA-BAANA SHOP, je souhaite payer par Orange Money pour ma commande : " + details;
+    
+    // Ouvre ton WhatsApp directement
+    window.location.href = "https://wa.me/" + monNumeroOM + "?text=" + encodeURIComponent(message);
+}
+
+
 
 
 
