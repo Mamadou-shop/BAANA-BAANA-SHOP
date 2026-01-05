@@ -77,13 +77,14 @@
         <h2>Résumé de votre commande</h2>
         <p id="order-details"></p>
         <hr>
-        <p><strong>Payez via :</strong> <span id="payment-method-display"></span></p>
-        <p>Envoyez le montant total au : <strong>777226359</strong></p>
-       <button id="confirm-order" onclick="confirmerPaiement()">Payer avec Wave</button>
-        <button onclick="payerOrangeMoney()" style="background-color: #FF7900; color: white; margin-top: 10px; width: 100%; border-radius: 8px; padding: 12px; border: none; font-weight: bold; cursor: pointer;">
-            Payer avec Orange Money
-        </button>
-   </div>
+        <div id="qr-container" style="display:none; text-align:center;">
+            <p><strong>Scannez pour payer par Orange Money :</strong></p>
+            <img src="qr-om.jpg" alt="QR Code Orange Money" style="width:200px; margin:10px auto;">
+            <p>Numéro : <strong>777226359</strong></p>
+        </div>
+        <button id="confirm-order" onclick="confirmerPaiement()">Payer avec Wave</button>
+        <button id="om-button" onclick="afficherQROrange()" style="background-color: #FF7900; color: white; margin-top: 10px; width: 100%; border-radius: 8px; padding: 12px; border: none; font-weight: bold;">Payer avec Orange Money</button>
+    </div>
 </div>
  <script src="script.js"></script>
 
@@ -94,5 +95,6 @@
 </body>
 
 </html>
+
 
 
