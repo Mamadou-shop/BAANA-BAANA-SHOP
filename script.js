@@ -150,44 +150,24 @@ filterBtns.forEach(btn => {
 // Lancer le chargement
 window.onload = chargerProduits;
 
-// Fonction pour gérer le bouton de confirmation du paiement
 function confirmerPaiement() {
-    const nom = document.getElementById('nomProduit').innerText;
-    const prixStr = document.getElementById('prixProduit').innerText;
-    const methode = document.getElementById('methodePaiement').value;
-    const monNumero = "777226359"; // <--- METS TON VRAI NUMÉRO ICI
-
-    // On récupère juste le chiffre du prix
-    const prix = parseInt(prixStr.replace(/\s/g, ''));
-
-    if (methode === "Wave") {
-        // Redirection vers l'application Wave
-        window.location.href = `https://wave.com/pay/${monNumero}?amount=${prix}`;
-    } else {
-        // Redirection vers WhatsApp pour Orange Money
-        const message = `Bonjour Boutique Mamadou, je souhaite payer ${nom} (${prix} FCFA) par Orange Money.`;
-        window.location.href = `https://wa.me/${monNumero}?text=${encodeURIComponent(message)}`;
-    }
-}
-
-function confirmerPaiement() {
-    // On récupère le texte du prix (ex: "100000 FCFA")
-    const prixTexte = document.getElementById('prixProduit').innerText;
+    // On récupère tout le texte du résumé (Nom + Prix)
+    const details = document.getElementById('order-details').innerText;
     
-    // CETTE LIGNE EST TRÈS IMPORTANTE : elle enlève "FCFA" et les espaces pour ne garder que le chiffre
-    const prixChiffre = prixTexte.replace(/[^\d]/g, ''); 
+    // On extrait uniquement les chiffres pour Wave
+    const prixChiffre = details.replace(/[^\d]/g, '');
     
-    const methode = document.getElementById('payment-method-display').innerText; // On récupère la méthode affichée
+    // On récupère la méthode (WAVE ou ORANGE MONEY)
+    const methode = document.getElementById('payment-method-display').innerText.toUpperCase();
+    
     const monNumero = "777226359"; 
 
-    if (methode === "WAVE") {
-        // Redirection vers Wave avec uniquement le chiffre
+    if (methode.includes("WAVE")) {
         window.location.href = `https://wave.com/pay/${monNumero}?amount=${prixChiffre}`;
     } else {
-        // Redirection vers WhatsApp pour Orange Money
-        const nom = document.getElementById('nomProduit').innerText;
-        const message = `Bonjour, je souhaite payer ${nom} (${prixChiffre} FCFA) par Orange Money.`;
+        const message = `Bonjour, je souhaite commander : ${details}`;
         window.location.href = `https://wa.me/${monNumero}?text=${encodeURIComponent(message)}`;
     }
 }
+
 
