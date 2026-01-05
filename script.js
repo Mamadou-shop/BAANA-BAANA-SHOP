@@ -151,6 +151,8 @@ filterBtns.forEach(btn => {
 window.onload = chargerProduits;
 
 function confirmerPaiement() {
+    alert("Le code fonctionne !");
+} 
     // On récupère tout le texte du résumé (Nom + Prix)
     const details = document.getElementById('order-details').innerText;
     
@@ -169,5 +171,6 @@ function confirmerPaiement() {
         window.location.href = `https://wa.me/${monNumero}?text=${encodeURIComponent(message)}`;
     }
 }
+
 
 
