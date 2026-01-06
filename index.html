@@ -72,30 +72,29 @@
 
 
 <div id="payment-modal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Résumé de votre commande</h2>
-        <p id="order-details"></p>
-        <hr>
-        <p><strong>Choisissez votre mode de paiement :</strong></p>
-        
-        <button onclick="confirmerPaiement()" style="background-color: #1dcaff; color: white; width: 100%; padding: 12px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; margin-bottom: 10px;">
-            Payer avec Wave
-        </button>
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Résumé de votre commande</h2>
+            <p id="order-details"></p>
+            <hr>
+            <p style="margin-bottom: 15px;"><strong>Choisissez votre moyen de paiement :</strong></p>
+            
+            <button id="confirm-order" onclick="confirmerPaiement()" style="background-color: #1dcaff; color: white; width: 100%; padding: 12px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; margin-bottom: 10px;">
+                Payer avec Wave
+            </button>
 
-        <button onclick="payerOrangeMoney()" style="background-color: #FF7900; color: white; width: 100%; padding: 12px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;">
-            Payer avec Orange Money
-        </button>
+            <button onclick="payerOrangeMoney()" style="background-color: #FF7900; color: white; width: 100%; padding: 12px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;">
+                Payer avec Orange Money
+            </button>
+        </div>
     </div>
-</div>
-    
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
-   
 </body>
 
 </html>
+
 
 
 
