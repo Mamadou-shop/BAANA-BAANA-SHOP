@@ -55,13 +55,11 @@ async function chargerProduits() {
             const modePaiement = carte.querySelector('select').value;
 
             // 2. Remplir les infos dans la fenêtre de paiement
-            document.getElementById('order-details').innerText = `Produit : ${produit.nom} - Prix : ${produit.prix} FCFA`;
-            document.getElementById('payment-method-display').innerText = modePaiement.toUpperCase();
+document.getElementById('order-details').innerText = `Produit : ${produit.nom} - Prix : ${produit.prix} FCFA`;
 
-            console.log("La fenêtre devrait s'ouvrir maintenant !");
+console.log("La fenêtre devrait s'ouvrir maintenant !");
 
-            modal.style.display = "block";
-
+modal.style.display = "block";
         });
 
         // Enfin, on ajoute la carte finie au conteneur
@@ -175,6 +173,7 @@ function afficherQROrange() {
     document.getElementById('confirm-order').style.display = 'none';
     document.getElementById('om-button').style.display = 'none';
 }
+
 
 
 
