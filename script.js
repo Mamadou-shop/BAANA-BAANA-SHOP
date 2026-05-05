@@ -49,7 +49,7 @@ const catalogueDouxDoux = [
     { id: 47, titre: "Colle forte Tube", prix: "1.000", cat: "Equipement", img: "https://i.pinimg.com/1200x/3b/30/93/3b3093b520f36a5a6337a46032b3658a.jpg" },
     { id: 48, titre: "Piles Rechargeables x4", prix: "5.000", cat: "Equipement", img: "https://i.pinimg.com/1200x/89/60/92/896092e2b9353a4b398543d6bc938f81.jpg" },
     { id: 49, titre: "Radio Portable", prix: "8.500", cat: "Equipement", img: "https://i.pinimg.com/736x/f9/32/cb/f932cbcd7fa328efbe07d1fb500cd064.jpg" },
-    { id: 50, titre: "Thermomètre Digital", prix: "2.500", cat: "Equipement", img: "https://i.pinimg.com/1200x/3f/5b/ce/3f5bce6a09f7ac7cd71e5f6c26780131.jpg" }
+    { id: 50, titre: "Thermomètre Digital", prix: "2.500", cat: "Equipement", img: "https://i.pinimg.com/1200x/3f/5b/ce/3f5bce6a09f7ac7cd71e5f6c26780131.jpg" },
     { id: 51, titre: "Mouton Ladoum", prix: "350.000", cat: "Marche-Frais", img: "https://images.unsplash.com/photo-1511117833452-472d9d2d7617?w=300" },
     { id: 52, titre: "Sac de Riz 50kg", prix: "22.500", cat: "Alimentation", img: "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=300" },
     { id: 53, titre: "Thiof Frais (KG)", prix: "6.500", cat: "Marche-Frais", img: "https://images.unsplash.com/photo-1534604973900-c41ab4c58f96?w=300" },
