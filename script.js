@@ -5,7 +5,7 @@ const catalogueDouxDoux = [
     { id: 3, titre: "Chargeur Rapide Type-C", prix: "5.000", cat: "Equipement", img: "https://i.pinimg.com/1200x/e5/41/24/e54124d86ab0362870d271ffb78e275b.jpg" },
     { id: 4, titre: "Clé USB 64Go", prix: "4.500",cat: "Equipement", img: "https://i.pinimg.com/736x/79/d6/bd/79d6bd675ec0090fdd54fc65ec9e00db.jpg" },
     { id: 5, titre: "Powerbank 10000mAh", prix: "12.500", cat: "Equipement", img: "https://i.pinimg.com/736x/48/bb/af/48bbaf4548f7c0d45026b3741bcf3132.jpg" },
-    { id: 6, titre: "Souris Sans Fil", prix: "3.500", cat: cat: "Equipement", img: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&q=80" },
+    { id: 6, titre: "Souris Sans Fil", prix: "3.500", cat: "Equipement", img: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&q=80" },
     { id: 7, titre: "T-shirt Coton", prix: "4.000", cat: "Textile-Mode", img: "https://i.pinimg.com/736x/27/4c/78/274c78deb9aaec0dbea20f60d6e8133a.jpg" },
     { id: 8, titre: "Casquette Sport", prix: "2.500", cat: "Textile-Mode", img: "https://i.pinimg.com/1200x/18/e6/80/18e68041cd04caa5a17268a56cfac252.jpg" },
     { id: 9, titre: "Coque iPhone", prix: "3.000", cat: "Equipement", img: "https://i.pinimg.com/1200x/27/90/e4/2790e4a0d84d5a72ba8a66ff7a986f99.jpg" },
