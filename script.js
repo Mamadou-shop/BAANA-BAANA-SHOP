@@ -57,132 +57,50 @@ const catalogueDouxDoux = [
     
 ];
 
-// 2. Fonction pour afficher les produits dans la grille
-function chargerProduits() {
+// 1. Fonction pour filtrer et afficher les produits
+function filtrerProduits(categorie) {
     const grille = document.getElementById("product-grid");
     if (!grille) return;
-    
-    grille.innerHTML = ""; // On vide pour éviter les doublons
 
-    catalogueDouxDoux.forEach(p => {
+    grille.innerHTML = ""; // On vide la grille pour charger les nouveaux produits
+
+    const produitsAffiches = categorie === 'Tous' 
+        ? catalogueDouxDoux 
+        : catalogueDouxDoux.filter(p => p.cat === categorie);
+
+    produitsAffiches.forEach(p => {
         grille.innerHTML += `
             <div class="product-card">
                 <div class="product-image">
-                    <img src="${p.img}" alt="${p.titre}" style="width:100%; height:300px; object-fit:cover;">
+                    <img src="${p.img}" alt="${p.titre}">
                 </div>
                 <div class="product-info">
                     <span class="category-tag">${p.cat}</span>
                     <h3 class="product-title">${p.titre}</h3>
-                    <p class="product-price">${p.prix} FCFA</p>
+                    <p class="product-price"><strong>${p.prix} FCFA</strong></p>
                     <div class="payment-buttons">
-                        <button class="btn-pay btn-wave" onclick="window.location.href='paiement.html'">Payer avec Wave</button>
-                        <button class="btn-pay btn-om" onclick="window.location.href='paiement.html'">Payer avec Orange Money</button>
+                        <button class="btn-pay btn-wave" onclick="window.location.href='#'">Wave</button>
+                        <button class="btn-pay btn-om" onclick="window.location.href='#'">Orange Money</button>
                     </div>
                 </div>
             </div>`;
     });
 }
 
-// 3. Lancement automatique au chargement de la page
-window.onload = chargerProduits;
+// 2. Lancement automatique au chargement de la page
+window.onload = () => filtrerProduits('Tous');
 
-// 4. Gestion du bouton "Remonter en haut"
-window.onscroll = function() {
-    let btn = document.getElementById("btn-scroll-top");
-    if (btn) {
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            btn.style.display = "block";
-        } else {
-            btn.style.display = "none";
-        }
-    }
-};
-
-// Fonction pour le clic sur le bouton remonter
-function topFunction() {
-    window.scrollTo({top: 0, behavior: 'smooth'});
-}
-
-// Fonction pour afficher uniquement une catégorie (les variétés)
-function voirVarietes(categorie) {
-    const produitsFiltres = catalogueDouxDoux.filter(p => p.cat === categorie);
-    afficherLaGrille(produitsFiltres);
-    
-    // Ajouter un bouton "Retour" pour revenir à tout le catalogue
-    const grille = document.getElementById("product-grid");
-    grille.insertAdjacentHTML('beforebegin', `<button id="btn-retour" onclick="chargerProduits()">← Retour au catalogue</button>`);
-}
-
-// Fonction principale pour dessiner les produits
-function afficherLaGrille(liste) {
-    const grille = document.getElementById("product-grid");
-    if (!grille) return;
-    grille.innerHTML = "";
-
-    liste.forEach(p => {
-        grille.innerHTML += `
-            <div class="product-card">
-                <div class="product-image" onclick="voirVarietes('${p.cat}')">
-                    <img src="${p.img}" alt="${p.titre}">
-                </div>
-                <div class="product-info">
-                    <h3 style="font-size:14px;">${p.titre}</h3>
-                    <p><strong>${p.prix} FCFA</strong></p>
-                    <button class="btn-pay btn-wave" onclick="window.location.href='paiement.html'">Acheter</button>
-                </div>
-            </div>`;
-    });
-}
-
-// Charger tous les produits au début
-function chargerProduits() {
-    const btnRetour = document.getElementById("btn-retour");
-    if(btnRetour) btnRetour.remove();
-    afficherLaGrille(catalogueDouxDoux);
-}
-
-window.onload = chargerProduits;
-
-
+// 3. Gestion du menu mobile
 function toggleMenu() {
     const menu = document.getElementById("side-menu");
     const overlay = document.getElementById("overlay");
-
-    if (menu.style.width === "280px") {
-        menu.style.width = "0";
-        overlay.style.display = "none";
-    } else {
-        menu.style.width = "280px";
-        overlay.style.display = "block";
+    if (menu) {
+        if (menu.style.width === "280px") {
+            menu.style.width = "0";
+            if (overlay) overlay.style.display = "none";
+        } else {
+            menu.style.width = "280px";
+            if (overlay) overlay.style.display = "block";
+        }
     }
-}
-
-
-function filtrerParCategorie(cat) {
-    const grille = document.querySelector('.product-grid'); // ou ta classe de conteneur
-    grille.innerHTML = ""; // On vide la grille
-
-    const resultats = produits.filter(p => p.categorie === cat);
-
-    resultats.forEach(p => {
-        grille.innerHTML += `
-            <div class="product-card">
-                <img src="${p.image}" alt="${p.nom}">
-                <h3>${p.nom}</h3>
-                <p>${p.prix} FCFA</p>
-                <button onclick="ajouterAuPanier()">Acheter</button>
-            </div>
-        `;
-    });
-
-    toggleMenu(); // Ferme le menu automatiquement après le clic
-}
-
-
-function ajouterAuPanier() {
-    document.getElementById("payment-modal").style.display = "block";
-}
-
-function closePayment() {
-    document.getElementById("payment-modal").style.display = "none";
 }
