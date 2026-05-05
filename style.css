@@ -564,3 +564,97 @@ hr { border: 0; border-top: 1px solid #ddd; margin: 10px 0; }
     font-weight: bold;
     margin-top: 10px;
 }
+
+
+
+/* --- 1. DESIGN DU MENU (Barre de navigation) --- */
+nav {
+    background: #131921; /* Couleur sombre style Amazon */
+    padding: 12px;
+    display: flex;
+    gap: 15px;
+    overflow-x: auto; /* Permet de glisser sur mobile */
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px; /* Boutons arrondis */
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: white;
+    color: #131921;
+}
+
+/* --- 2. GRILLE DE PRODUITS (Défilement Horizontal) --- */
+#product-grid {
+    display: flex; /* Aligne les produits sur une ligne */
+    overflow-x: auto; /* Active le défilement de gauche à droite */
+    gap: 20px;
+    padding: 20px;
+    background: #f0f2f2;
+    scroll-behavior: smooth;
+}
+
+/* --- 3. CARTE PRODUIT (Design Individuel) --- */
+.product-card {
+    min-width: 240px; /* Largeur fixe pour chaque carte */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex: 0 0 auto; /* Empêche les cartes de rétrécir */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* L'image remplit le cadre sans se déformer */
+}
+
+.product-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.price {
+    color: #B12704; /* Rouge foncé pour le prix */
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* --- 4. BOUTONS DE PAIEMENT --- */
+.btn-wave {
+    background: #1da1f2;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-om {
+    background: #ff7900;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
