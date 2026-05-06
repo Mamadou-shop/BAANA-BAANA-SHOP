@@ -762,3 +762,34 @@ nav a:hover {
     font-size: 14px;
     cursor: pointer;
 }
+
+
+/* Le bouton de recherche en bleu ciel */
+.nav-search-btn {
+    background-color: #87CEEB; /* Bleu ciel (SkyBlue) */
+    border: none;
+    width: 45px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 18px;
+    color: #131921; /* Icône sombre pour le contraste */
+}
+
+/* Le compteur du panier en bleu ciel vif */
+#cart-count {
+    position: absolute;
+    top: -10px;
+    right: -5px;
+    background-color: #00BFFF; /* Bleu ciel profond (DeepSkyBlue) */
+    color: white; /* Texte blanc pour une meilleure lisibilité */
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3); /* Un léger relief */
+}
+
+/* Optionnel : changer la couleur de ".sn" dans le logo pour l'assortir */
+.nav-logo span {
+    color: #87CEEB;
+}
