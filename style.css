@@ -964,3 +964,43 @@ nav a:hover {
 .nav-categories-bar::-webkit-scrollbar {
     display: none;
 }
+
+
+.hero-slider {
+    position: relative;
+    max-width: 100%;
+    height: 450px; /* Hauteur de la pub */
+    overflow: hidden;
+    margin-bottom: -150px; /* Effet crucial : fait remonter les produits sur l'image */
+    z-index: 1;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide img {
+    width: 100vw;
+    height: 450px;
+    object-fit: cover;
+    /* Dégradé en bas de l'image pour fondre avec le site */
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0));
+}
+
+/* Boutons */
+.prev, .next {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 2px solid transparent;
+    font-size: 40px;
+    cursor: pointer;
+    padding: 10px;
+    color: #333;
+}
+
+.prev:hover, .next:hover { border: 1px solid #00BFFF; }
+.next { right: 20px; }
+.prev { left: 20px; }
