@@ -966,26 +966,31 @@ nav a:hover {
 }
 
 
+
+/* 1. Réduire la hauteur du conteneur */
 .hero-slider {
     position: relative;
-    max-width: 100%;
-    height: 450px; /* Hauteur de la pub */
+    width: 100%;
+    height: 300px; /* On réduit de 450px à 300px pour gagner de la place */
     overflow: hidden;
-    margin-bottom: -150px; /* Effet crucial : fait remonter les produits sur l'image */
+    margin-bottom: -150px; /* On garde ce réglage pour faire monter les produits */
     z-index: 1;
 }
 
-.slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+/* 2. Ajuster l'image pour qu'elle ne soit pas écrasée */
+.slide img {
+    width: 100%;
+    height: 400px; /* L'image est un peu plus grande que le cadre pour l'effet de parallaxe */
+    object-fit: cover;
+    /* On ajoute un dégradé plus fort pour que le bas soit transparent */
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
 }
 
-.slide img {
-    width: 100vw;
-    height: 450px;
-    object-fit: cover;
-    /* Dégradé en bas de l'image pour fondre avec le site */
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0));
+/* 3. S'assurer que les produits passent par-dessus l'image */
+.container, #product-grid {
+    position: relative;
+    z-index: 2; /* Plus élevé que le slider (z-index: 1) */
 }
 
 /* Boutons */
