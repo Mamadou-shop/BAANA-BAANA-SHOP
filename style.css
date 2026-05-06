@@ -934,3 +934,33 @@ nav a:hover {
     margin-right: 10px;
     color: #555;
 }
+
+
+.nav-categories-bar {
+    background-color: #fafafa; /* Fond gris très clair pour séparer du noir */
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: center; /* Centre les catégories */
+    gap: 20px;
+    padding: 5px 0; /* Très fine */
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.nav-categories-bar a {
+    color: #555;
+    text-decoration: none;
+    font-size: 12px; /* Police plus petite pour la finesse */
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-categories-bar a:hover {
+    color: #00BFFF; /* Rappel de ton bleu ciel */
+    text-decoration: underline;
+}
+
+/* Masquer la barre de défilement pour un look plus propre */
+.nav-categories-bar::-webkit-scrollbar {
+    display: none;
+}
