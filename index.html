@@ -11,25 +11,39 @@
 
 <div id="side-menu" class="side-nav">
     <div class="menu-header">
-        <div class="user-profile">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-            <span>Identifiez-vous</span>
-        </div>
+        <i class="fas fa-user"></i>
+        <span>Bonjour, Identifiez-vous</span>
         <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
     </div>
 
     <div class="menu-content">
         <h3>Parcourir Doux-Doux</h3>
-        <a href="#"><i class="home-icon"></i> Page d'accueil</a>
+        <a href="#" onclick="filtrerProduits('Tous'); toggleMenu();">Page d'accueil</a>
+
+        <hr>
+
+        <h3>Tendances</h3>
+        <a href="#">Meilleures ventes</a>
+        <a href="#">Dernières Nouveautés</a>
+
+        <hr>
+
+        <!-- NOUVELLE SECTION : TES CATÉGORIES COMME SUR AMAZON -->
+        <h3>Rayons Doux-Doux</h3>
+        <a href="#" onclick="filtrerProduits('Marché-Frais'); toggleMenu();">Marché Frais</a>
+        <a href="#" onclick="filtrerProduits('Alimentation'); toggleMenu();">Épicerie</a>
+        <a href="#" onclick="filtrerProduits('Textile-Mode'); toggleMenu();">Textile et Mode</a>
+        <a href="#" onclick="filtrerProduits('Agri-Elevage'); toggleMenu();">Agri & Matériel Élevage</a>
+        <a href="#" onclick="filtrerProduits('Equipement'); toggleMenu();">High-Tech et Maison</a>
+        <a href="#" onclick="filtrerProduits('BTP-Energie'); toggleMenu();">BTP & Solaire</a>
         
         <hr>
-      
-        <h3>Tendances</h3>
-        <a href="#" onclick="toggleMenu()">Meilleures ventes</a>
-        <a href="#" onclick="toggleMenu()">Dernières Nouveautés</a>
-
-    <hr>
-
+        
+        <h3>Aide et paramètres</h3>
+        <a href="#">Votre compte</a>
+        <a href="#">Service client</a>
+    </div>
+</div>
    <nav style="background: #131921; padding: 10px; display: flex; gap: 15px; overflow-x: auto; white-space: nowrap; position: sticky; top: 0; z-index: 1000;">
     <a href="#" onclick="filtrerProduits('Tous')" style="color: white; text-decoration: none; font-weight: bold; padding: 5px 10px; border: 1px solid #ffffff44; border-radius: 4px;">Accueil</a>
     
