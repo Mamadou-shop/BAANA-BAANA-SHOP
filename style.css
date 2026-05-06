@@ -793,3 +793,18 @@ nav a:hover {
 .nav-logo span {
     color: #87CEEB;
 }
+
+.btn-add-cart {
+    background-color: #ffd814; /* Jaune Amazon */
+    border: 1px solid #fcd200;
+    border-radius: 20px;
+    padding: 8px 15px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.btn-add-cart:hover {
+    background-color: #f7ca00;
+}
