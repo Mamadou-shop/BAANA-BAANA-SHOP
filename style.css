@@ -902,3 +902,35 @@ nav a:hover {
 .nav-bold {
     font-weight: bold;
 }
+
+/* Style des icônes de flèche à droite */
+.menu-content a i.fa-chevron-right {
+    float: right;
+    margin-top: 5px;
+    color: #888;
+    font-size: 12px;
+}
+
+/* Style pour "Tout afficher" */
+.view-all {
+    color: #111 !important;
+    font-weight: 500;
+}
+
+.view-all i {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* Espacement des sections Aide */
+.menu-content h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #111;
+    padding: 15px 20px 5px 20px;
+}
+
+.menu-content a i.fa-globe {
+    margin-right: 10px;
+    color: #555;
+}
