@@ -808,3 +808,62 @@ nav a:hover {
 .btn-add-cart:hover {
     background-color: #f7ca00;
 }
+
+
+/* Style de la barre principale (Ligne 1) */
+.nav-main {
+    background-color: #131921;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 15px;
+}
+
+/* Regroupement des éléments à droite */
+.nav-right-items {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* LA LIGNE FINE DU BAS (Ligne 2) */
+.nav-sub {
+    background-color: #232f3e;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    color: white;
+}
+
+.nav-sub-left {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 8px;
+    border: 1px solid transparent;
+}
+
+.nav-sub-left:hover {
+    border: 1px solid white;
+}
+
+.nav-sub-links {
+    display: flex;
+    gap: 15px;
+    margin-left: 10px;
+}
+
+.nav-sub-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px;
+    border: 1px solid transparent;
+}
+
+.nav-sub-links a:hover {
+    border: 1px solid white;
+}
