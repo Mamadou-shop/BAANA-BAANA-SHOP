@@ -867,3 +867,38 @@ nav a:hover {
 .nav-sub-links a:hover {
     border: 1px solid white;
 }
+
+
+.nav-sub {
+    background-color: #232f3e;
+    height: 39px; /* Hauteur fixe pour rester fin */
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    color: white;
+    overflow: hidden; /* Évite que les liens ne dépassent sur petit écran */
+}
+
+.nav-sub-links {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espace réduit entre les liens pour tout faire tenir */
+}
+
+.nav-sub-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px; /* Taille de police Amazon */
+    padding: 8px 10px;
+    border: 1px solid transparent;
+    white-space: nowrap; /* Empêche le texte de revenir à la ligne */
+}
+
+.nav-sub-links a:hover {
+    border: 1px solid white; /* Effet de bordure au survol style Amazon */
+    border-radius: 2px;
+}
+
+.nav-bold {
+    font-weight: bold;
+}
