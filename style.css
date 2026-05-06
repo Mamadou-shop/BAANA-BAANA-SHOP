@@ -685,3 +685,80 @@ nav a:hover {
     background-color: #eaeded;
     color: #c45500; /* Orange Amazon */
 }
+
+
+
+/* Barre principale noire */
+.nav-main {
+    background-color: #131921;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+}
+
+/* Alignement des textes (ligne 1 petite, ligne 2 grasse) */
+.nav-line-1 { font-size: 12px; color: #ccc; display: block; }
+.nav-line-2 { font-size: 14px; font-weight: bold; display: block; }
+
+/* Logo */
+.nav-logo a { color: white; font-size: 22px; font-weight: bold; text-decoration: none; margin-right: 20px; }
+.nav-logo span { color: #febd69; }
+
+/* Adresse livraison */
+.nav-delivery { display: flex; align-items: center; cursor: pointer; margin-right: 20px; }
+.nav-delivery i { font-size: 18px; margin-right: 5px; margin-top: 10px; }
+
+/* LA BARRE DE RECHERCHE */
+.nav-search {
+    display: flex;
+    flex-grow: 1;
+    height: 40px;
+    margin: 0 15px;
+}
+
+.nav-search-categories {
+    background-color: #f3f3f3;
+    border-radius: 4px 0 0 4px;
+    border: none;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+.nav-search input {
+    flex-grow: 1;
+    border: none;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+.nav-search-btn {
+    background-color: #febd69;
+    border: none;
+    width: 45px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Drapeaux et autres liens */
+.nav-flag { width: 20px; margin-right: 5px; }
+.nav-language, .nav-account, .nav-orders, .nav-cart {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* Barre de menu du bas */
+.nav-bottom {
+    background-color: #232f3e;
+    display: flex;
+    padding: 5px 20px;
+    gap: 15px;
+}
+
+.nav-bottom a, .menu-toggle {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+}
