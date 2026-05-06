@@ -121,3 +121,31 @@ function toggleMenu() {
         }
     }
 }
+
+
+let slideIndex = 0;
+
+function showSlides() {
+    const slides = document.querySelector('.slides');
+    const totalSlides = document.querySelectorAll('.slide').length;
+    
+    slideIndex++;
+    if (slideIndex >= totalSlides) { slideIndex = 0; }
+    
+    slides.style.transform = `translateX(${-slideIndex * 100}%)`;
+}
+
+// Change d'image toutes les 5 secondes
+setInterval(showSlides, 5000);
+
+// Fonction pour les boutons manuel
+function moveSlide(n) {
+    slideIndex += n;
+    const slides = document.querySelector('.slides');
+    const totalSlides = document.querySelectorAll('.slide').length;
+    
+    if (slideIndex >= totalSlides) { slideIndex = 0; }
+    if (slideIndex < 0) { slideIndex = totalSlides - 1; }
+    
+    slides.style.transform = `translateX(${-slideIndex * 100}%)`;
+}
