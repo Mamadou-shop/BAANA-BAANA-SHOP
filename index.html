@@ -72,15 +72,13 @@
 <div id="overlay" onclick="toggleMenu()"></div>
     
    <header>
-    <!-- BARRE PRINCIPALE (STYLE AMAZON) -->
+    <!-- LIGNE 1 : LOGO, LIVRAISON, RECHERCHE, COMPTE, PANIER -->
     <div class="nav-main">
-        <!-- Logo -->
         <div class="nav-logo">
             <a href="#">Doux-Doux<span>.sn</span></a>
         </div>
 
-        <!-- Adresse de livraison -->
-        <div class="nav-delivery" onclick="alert('Choix des localités au Sénégal bientôt disponible !')">
+        <div class="nav-delivery">
             <i class="fas fa-map-marker-alt"></i>
             <div class="nav-text">
                 <span class="nav-line-1">Votre adresse de livraison:</span>
@@ -88,56 +86,52 @@
             </div>
         </div>
 
-        <!-- Barre de recherche avec catégories -->
         <div class="nav-search">
             <select class="nav-search-categories">
                 <option>Toutes nos catégories</option>
-                <option>Marché Frais</option>
-                <option>Épicerie</option>
-                <option>Textile & Mode</option>
             </select>
             <input type="text" placeholder="recherche Doux-Doux.sn">
             <button class="nav-search-btn"><i class="fas fa-search"></i></button>
         </div>
 
-        <!-- Langue/Drapeau -->
-        <div class="nav-language">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Flag_of_Senegal.svg" alt="Sénégal" class="nav-flag">
-            <span>SN</span>
+        <div class="nav-right-items">
+            <div class="nav-language">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Flag_of_Senegal.svg" class="nav-flag">
+                <span>SN</span>
+            </div>
+            <div class="nav-account">
+                <span class="nav-line-1">Bonjour, Identifiez-vous</span>
+                <span class="nav-line-2">Compte et listes</span>
+            </div>
+            <div class="nav-orders">
+                <span class="nav-line-1">Retours</span>
+                <span class="nav-line-2">et Commandes</span>
+            </div>
+            <div class="nav-cart">
+                <div class="cart-icon-container">
+                    <span id="cart-count">0</span>
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <span class="nav-line-2">Panier</span>
+            </div>
         </div>
-
-        <!-- Compte et Listes -->
-        <div class="nav-account">
-            <span class="nav-line-1">Bonjour, Identifiez-vous</span>
-            <span class="nav-line-2">Compte et listes <i class="fas fa-caret-down"></i></span>
-        </div>
-
-        <!-- Retours et Commandes -->
-        <div class="nav-orders">
-            <span class="nav-line-1">Retours</span>
-            <span class="nav-line-2">et Commandes</span>
-        </div>
-
-       <!-- Panier avec le compteur -->
-<div class="nav-cart">
-    <div class="cart-icon-container">
-        <span id="cart-count">0</span>
-        <i class="fas fa-shopping-cart"></i>
     </div>
-    <span class="nav-line-2">Panier</span>
-</div>
-    <!-- BARRE DE MENU (EN DESSOUS) -->
-    <nav class="nav-bottom">
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <i class="fas fa-bars"></i> Toutes
+
+    <!-- LIGNE 2 : LES TROIS BARRES ET LA LISTE HORIZONTALE -->
+    <div class="nav-sub">
+        <div class="nav-sub-left" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+            <span>Toutes</span>
         </div>
-        <a href="#">Meilleures ventes</a>
-        <a href="#">Dernières Nouveautés</a>
-        <a href="#">Offres flash</a>
-        <a href="#">Service Client</a>
-    </nav>
+        <div class="nav-sub-links">
+            <a href="#">Meilleures ventes</a>
+            <a href="#">Dernières Nouveautés</a>
+            <a href="#">Ventes Flash</a>
+            <a href="#">Service Client</a>
+            <a href="#">Vendre sur Doux-Doux</a>
+        </div>
+    </div>
 </header>
-    
     
 
     <!-- Titre de la section -->
