@@ -56,7 +56,7 @@ const catalogueDouxDoux = [
  { id: 54, titre: "Panneau Solaire 200W", prix: "75.000", cat: "BTP-Energie", img: "https://images.unsplash.com/photo-1509391366360-fe5bb6583e23?w=300" }
     
 ];
-
+let panier = [];
 // 1. Fonction pour filtrer et afficher les produits
 function filtrerProduits(categorie) {
     const grille = document.getElementById("product-grid");
@@ -78,10 +78,14 @@ function filtrerProduits(categorie) {
                     <span class="category-tag">${p.cat}</span>
                     <h3 class="product-title">${p.titre}</h3>
                     <p class="product-price"><strong>${p.prix} FCFA</strong></p>
-                    <div class="payment-buttons">
-                        <button class="btn-pay btn-wave" onclick="window.location.href='#'">Wave</button>
-                        <button class="btn-pay btn-om" onclick="window.location.href='#'">Orange Money</button>
-                    </div>
+                   <div class="payment-buttons">
+                   <button class="btn-add-cart" onclick="ajouterAuPanier('${p.titre}', ${p.prix})">
+                      Ajouter au panier
+                   </button>
+                   <button class="btn-pay btn-wave" onclick="window.location.href='#'">Wave</button>
+                   <button class="btn-pay btn-om" onclick="window.location.href='#'">Orange Money</button>
+                  </div>
+                  
                 </div>
             </div>`;
     });
@@ -101,6 +105,19 @@ function toggleMenu() {
         } else {
             menu.style.width = "280px";
             if (overlay) overlay.style.display = "block";
+
+
+            function ajouterAuPanier(titre, prix) {
+    panier.push({ titre: titre, prix: prix });
+    
+    // Met à jour le chiffre sur ton panier bleu ciel
+    const compteur = document.getElementById('cart-count');
+    if (compteur) {
+        compteur.innerText = panier.length;
+    }
+    
+    alert(titre + " a été ajouté au panier !");
+}
         }
     }
 }
