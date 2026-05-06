@@ -48,29 +48,8 @@
         <a href="#">Se connecter</a>
     </div>
 </div>
-   <nav style="background: #131921; padding: 10px; display: flex; gap: 15px; overflow-x: auto; white-space: nowrap; position: sticky; top: 0; z-index: 1000;">
-    <a href="#" onclick="filtrerProduits('Tous')" style="color: white; text-decoration: none; font-weight: bold; padding: 5px 10px; border: 1px solid #ffffff44; border-radius: 4px;">Accueil</a>
-    
-    <!-- 1. Le Marché Frais & Vivant -->
-    <a href="#" onclick="filtrerProduits('Marche-Frais')" style="color: white; text-decoration: none;">🥩 Marché Frais (Bétail, Volaille, Pêche)</a>
-    
-    <!-- 2. Épicerie & Alimentation -->
-    <a href="#" onclick="filtrerProduits('Alimentation')" style="color: white; text-decoration: none;">🍚 Épicerie (Riz, Huile, Sec)</a>
-    
-    <!-- 3. Textile & Mode -->
-    <a href="#" onclick="filtrerProduits('Textile-Mode')" style="color: white; text-decoration: none;">👗 Textile & Mode (Tissus, Habits)</a>
-    
-    <!-- 4. Agriculture & Élevage (Matériel) -->
-    <a href="#" onclick="filtrerProduits('Agri-Elevage')" style="color: white; text-decoration: none;">🚜 Agri & Matériel Élevage</a>
-    
-    <!-- 5. Équipement & Maison -->
-    <a href="#" onclick="filtrerProduits('Equipement')" style="color: white; text-decoration: none;">🔌 High-Tech & Maison</a>
-    
-    <!-- 6. BTP & Énergie -->
-    <a href="#" onclick="filtrerProduits('BTP-Energie')" style="color: white; text-decoration: none;">🏗️ BTP & Solaire</a>
-</nav>
-</div>
-</div>
+   
+
 
 <div id="overlay" onclick="toggleMenu()"></div>
     
@@ -140,7 +119,15 @@
 </div>
     </div>
 </header>
-    
+
+    <div class="nav-categories-bar">
+    <a href="#" onclick="filtrerProduits('Marche-Frais')">Marché Frais</a>
+    <a href="#" onclick="filtrerProduits('Alimentation')">Épicerie</a>
+    <a href="#" onclick="filtrerProduits('Textile-Mode')">Textile & Mode</a>
+    <a href="#" onclick="filtrerProduits('Agri-Elevage')">Agriculture & Élevage</a>
+    <a href="#" onclick="filtrerProduits('Equipement')">Équipement & Maison</a>
+    <a href="#" onclick="filtrerProduits('BTP-Energie')">BTP & Solaire</a>
+</div>
 
     <!-- Titre de la section -->
     <h2 style="text-align: center; margin: 40px 0; text-transform: uppercase; letter-spacing: 2px;">
