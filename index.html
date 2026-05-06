@@ -29,7 +29,7 @@
 
         <hr>
 
-        <!-- NOUVELLE SECTION : TES CATÉGORIES COMME SUR AMAZON -->
+        <!-- NOUVELLE SECTION de CATÉGORIES 
         <h3>Rayons Doux-Doux</h3>
         <a href="#" onclick="filtrerProduits('Marché-Frais'); toggleMenu();">Marché Frais</a>
         <a href="#" onclick="filtrerProduits('Alimentation'); toggleMenu();">Épicerie</a>
@@ -118,13 +118,14 @@
             <span class="nav-line-2">et Commandes</span>
         </div>
 
-        <!-- Panier -->
-        <div class="nav-cart">
-            <i class="fas fa-shopping-cart"></i>
-            <span class="nav-line-2">Panier</span>
-        </div>
+       <!-- Panier avec le compteur -->
+<div class="nav-cart">
+    <div class="cart-icon-container">
+        <span id="cart-count">0</span>
+        <i class="fas fa-shopping-cart"></i>
     </div>
-
+    <span class="nav-line-2">Panier</span>
+</div>
     <!-- BARRE DE MENU (EN DESSOUS) -->
     <nav class="nav-bottom">
         <div class="menu-toggle" onclick="toggleMenu()">
