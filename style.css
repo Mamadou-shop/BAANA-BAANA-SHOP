@@ -658,3 +658,30 @@ nav a:hover {
     cursor: pointer;
     font-weight: bold;
 }
+
+
+.side-nav hr {
+    border: 0;
+    border-top: 1px solid #d5dbdb;
+    margin: 10px 0;
+}
+
+.side-nav h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #111;
+    padding: 10px 20px 5px 20px;
+    margin: 0;
+}
+
+.side-nav a {
+    padding: 10px 20px;
+    color: #111;
+    display: block;
+    transition: background 0.2s;
+}
+
+.side-nav a:hover {
+    background-color: #eaeded;
+    color: #c45500; /* Orange Amazon */
+}
