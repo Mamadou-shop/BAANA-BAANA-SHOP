@@ -123,18 +123,37 @@ function toggleMenu() {
 }
 
 
+// 1. On déclare la variable une seule fois proprement
 let slideIndex = 0;
 
+// 2. Fonction pour le défilement automatique
 function showSlides() {
-    const slides = document.querySelector('.slides');
-    const totalSlides = document.querySelectorAll('.slide').length;
+    const slidesContainer = document.querySelector('.slides');
+    const allSlides = document.querySelectorAll('.slide');
     
-    slideIndex++;
-    if (slideIndex >= totalSlides) { slideIndex = 0; }
-    
-    slides.style.transform = `translateX(${-slideIndex * 100}%)`;
+    if (slidesContainer && allSlides.length > 0) {
+        slideIndex++;
+        if (slideIndex >= allSlides.length) { slideIndex = 0; }
+        
+        // Utilise bien les backticks ` (touche 7 ou près de Entrée)
+        slidesContainer.style.transform = `translateX(${-slideIndex * 100}%)`;
+    }
 }
 
-// Change d'image toutes les 5 secondes
+// 3. Lancement de l'intervalle (toutes les 5 secondes)
 setInterval(showSlides, 5000);
 
+// 4. Fonction pour les boutons fléchés (Précédent / Suivant)
+function moveSlide(n) {
+    const slidesContainer = document.querySelector('.slides');
+    const allSlides = document.querySelectorAll('.slide');
+
+    if (slidesContainer && allSlides.length > 0) {
+        slideIndex += n;
+
+        if (slideIndex >= allSlides.length) { slideIndex = 0; }
+        if (slideIndex < 0) { slideIndex = allSlides.length - 1; }
+
+        slidesContainer.style.transform = `translateX(${-slideIndex * 100}%)`;
+    }
+}
