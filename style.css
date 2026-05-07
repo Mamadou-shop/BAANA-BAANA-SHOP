@@ -1087,3 +1087,37 @@ nav a:hover {
     font-size: 18px;
     color: #ddd;
 }
+
+
+
+.slides {
+    display: flex;             /* Aligne les images sur une seule ligne */
+    width: 100%;               /* Prend toute la largeur */
+    transition: transform 0.5s ease-in-out; /* Pour un mouvement fluide */
+}
+
+.slide {
+    min-width: 100%;           /* Chaque image doit faire 100% de la largeur du slider */
+    flex-shrink: 0;            /* Empêche les images de rétrécir */
+}
+
+.slide img {
+    width: 100%;               /* L'image remplit son conteneur */
+    height: 250px;             /* La hauteur qu'on a fixée ensemble */
+    object-fit: cover;         /* Évite de déformer l'image */
+}.slides {
+    display: flex;             /* Aligne les images sur une seule ligne */
+    width: 100%;               /* Prend toute la largeur */
+    transition: transform 0.5s ease-in-out; /* Pour un mouvement fluide */
+}
+
+.slide {
+    min-width: 100%;           /* Chaque image doit faire 100% de la largeur du slider */
+    flex-shrink: 0;            /* Empêche les images de rétrécir */
+}
+
+.slide img {
+    width: 100%;               /* L'image remplit son conteneur */
+    height: 250px;             /* La hauteur qu'on a fixée ensemble */
+    object-fit: cover;         /* Évite de déformer l'image */
+}
