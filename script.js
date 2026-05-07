@@ -138,16 +138,3 @@ function showSlides() {
 // Change d'image toutes les 5 secondes
 setInterval(showSlides, 5000);
 
-function moveSlide(n) {
-    const slides = document.querySelector('.slides');
-    const totalSlides = document.querySelectorAll('.slide').length;
-
-    slideIndex += n;
-
-    if (slideIndex >= totalSlides) { slideIndex = 0; }
-    if (slideIndex < 0) { slideIndex = totalSlides - 1; }
-
-    // C'est cette ligne qui déplace l'image quand tu cliques
-    slides.style.transform = `translateX(${-slideIndex * 100}%)`;
-}
-}
