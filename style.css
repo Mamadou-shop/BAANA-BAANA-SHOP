@@ -702,7 +702,15 @@ nav a:hover {
 .nav-line-2 { font-size: 14px; font-weight: bold; display: block; }
 
 /* Logo */
-.nav-logo a { color: white; font-size: 22px; font-weight: bold; text-decoration: none; margin-right: 20px; }
+.nav-logo a { 
+    color: white; 
+    font-size: 22px; 
+    font-weight: bold; 
+    text-decoration: none;
+    white-space: nowrap; /* AJOUTE CETTE LIGNE : Empêche Doux-Doux de se couper */
+    display: flex;       /* Pour aligner le texte et un éventuel petit logo */
+    align-items: center;
+}
 .nav-logo span { color: #febd69; }
 
 /* Adresse livraison */
@@ -714,7 +722,7 @@ nav a:hover {
     display: flex;
     flex-grow: 1;
     height: 40px;
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 .nav-search-categories {
