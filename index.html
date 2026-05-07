@@ -130,16 +130,23 @@
 </div>
 <div class="hero-slider">
     <div class="slides">
-        <div class="slide">
-            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=1200" alt="Publicité 1">
-        </div>
-        <div class="slide">
-            <img src="https://images.unsplash.com/photo-1509391366360-fe5bb6583e23?w=1200" alt="Publicité 2">
-        </div>
-        <div class="slide">
-            <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?w=1200" alt="Publicité 3">
-        </div>
+        <div class="slides">
+    <div class="slide" onclick="filtrerProduits('Marche-Frais')">
+        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=1200" alt="Marché Frais">
     </div>
+    
+    <div class="slide" onclick="filtrerProduits('Textile-Mode')">
+        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1200" alt="Mode Doux-Doux">
+    </div>
+
+    <div class="slide" onclick="filtrerProduits('BTP-Energie')">
+        <img src="https://images.unsplash.com/photo-1509391366360-fe5bb6583e23?w=1200" alt="Solaire">
+    </div>
+    
+    <div class="slide" onclick="filtrerProduits('Equipement')">
+        <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?w=1200" alt="High-Tech">
+    </div>
+</div>
     <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
     <button class="next" onclick="moveSlide(1)">&#10095;</button>
 </div>
