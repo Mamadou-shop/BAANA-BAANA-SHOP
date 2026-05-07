@@ -158,3 +158,28 @@ function moveSlide(n) {
         slidesContainer.style.transform = `translateX(${-slideIndex * 100}%)`;
     }
 }
+
+
+let nombreArticles = 0; // On commence à zéro
+
+function ajouterAuPanier(titre, prix) {
+    // 1. On augmente le compteur
+    nombreArticles++;
+
+    // 2. On cherche l'élément HTML du chiffre
+    const compteurHTML = document.getElementById('cart-count');
+
+    // 3. On met à jour le texte affiché
+    if (compteurHTML) {
+        compteurHTML.innerText = nombreArticles;
+        
+        // Petit effet visuel : le chiffre grossit un peu quand on ajoute
+        compteurHTML.style.transform = "scale(1.2)";
+        setTimeout(() => {
+            compteurHTML.style.transform = "scale(1)";
+        }, 200);
+    }
+
+    // Optionnel : Alerte pour confirmer
+    console.log("Ajouté : " + titre + " au prix de " + prix + " FCFA");
+}
