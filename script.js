@@ -143,7 +143,6 @@ function showSlides() {
 // 3. Lancement de l'intervalle (toutes les 5 secondes)
 setInterval(showSlides, 5000);
 
-// 4. Fonction pour les boutons fléchés (Précédent / Suivant)
 function moveSlide(n) {
     const slidesContainer = document.querySelector('.slides');
     const allSlides = document.querySelectorAll('.slide');
@@ -151,9 +150,11 @@ function moveSlide(n) {
     if (slidesContainer && allSlides.length > 0) {
         slideIndex += n;
 
+        // Gestion de la boucle infinie
         if (slideIndex >= allSlides.length) { slideIndex = 0; }
         if (slideIndex < 0) { slideIndex = allSlides.length - 1; }
 
+        // Déplacement de la bande d'images
         slidesContainer.style.transform = `translateX(${-slideIndex * 100}%)`;
     }
 }
