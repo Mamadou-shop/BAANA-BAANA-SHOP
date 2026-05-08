@@ -720,7 +720,7 @@ nav a:hover {
 /* LA BARRE DE RECHERCHE */
 .nav-search {
     display: flex;
-    width: 50%;           /* Définit une taille moyenne (50% de la largeur) */
+    width: 40%;           /* Définit une taille moyenne (40% de la largeur) */
     height: 40px;
     margin: 0 auto;       /* Centre la barre horizontalement */
     background-color: white;
