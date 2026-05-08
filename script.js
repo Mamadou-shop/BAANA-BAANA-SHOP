@@ -307,3 +307,45 @@ const senegalMap = {
         "Salémata": ["Salémata", "Dakateli", "Ethiolo", "Kevoye", "Oubadji"]
     }
 };
+
+function chargerDepartements() {
+    const region = document.getElementById('select-region').value;
+    const deptSelect = document.getElementById('select-departement');
+    const commSelect = document.getElementById('select-commune');
+    
+    // On réinitialise les menus
+    deptSelect.innerHTML = '<option value="">-- Département --</option>';
+    commSelect.innerHTML = '<option value="">-- Commune --</option>';
+
+    if (region && senegalMap[region]) {
+        // On affiche le menu département s'il était caché
+        deptSelect.style.display = "block"; 
+        
+        for (let dept in senegalMap[region]) {
+            let opt = document.createElement("option");
+            opt.value = dept;
+            opt.textContent = dept;
+            deptSelect.appendChild(opt);
+        }
+    }
+}
+
+function chargerCommunes() {
+    const region = document.getElementById('select-region').value;
+    const dept = document.getElementById('select-departement').value;
+    const commSelect = document.getElementById('select-commune');
+    
+    commSelect.innerHTML = '<option value="">-- Commune --</option>';
+
+    if (dept && senegalMap[region][dept]) {
+        // On affiche le menu commune s'il était caché
+        commSelect.style.display = "block";
+
+        senegalMap[region][dept].forEach(commune => {
+            let opt = document.createElement("option");
+            opt.value = commune;
+            opt.textContent = commune;
+            commSelect.appendChild(opt);
+        });
+    }
+}
