@@ -720,9 +720,9 @@ nav a:hover {
 /* LA BARRE DE RECHERCHE */
 .nav-search {
     display: flex;
-    width: 40%;           /* Définit une taille moyenne (40% de la largeur) */
+    width: 35% !important; /* On réduit pour que le panier remonte */
     height: 40px;
-    margin: 0 auto;       /* Centre la barre horizontalement */
+    margin: 0 auto;
     background-color: white;
     border-radius: 4px;
 }
@@ -835,31 +835,21 @@ nav a:hover {
 .nav-main {
     background-color: #131921;
     display: flex;
+    flex-direction: row; /* Force la ligne droite */
     align-items: center;
-    justify-content: space-between; /* Ça pousse les éléments aux extrémités */
-    padding: 5px 15px; /* On réduit un peu le padding pour gagner de la place */
-    gap: 10px;
-    height: 60px; /* On fixe la hauteur pour que rien ne dépasse */
-    flex-wrap: nowrap; /* INTERDIT de sauter à la ligne */
+    justify-content: space-between;
+    padding: 5px 15px;
+    height: 65px;
+    flex-wrap: nowrap; /* Empêche absolument de descendre à la ligne */
 }
-.nav-main {
-    background-color: #131921;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Ça pousse les éléments aux extrémités */
-    padding: 5px 15px; /* On réduit un peu le padding pour gagner de la place */
-    gap: 10px;
-    height: 60px; /* On fixe la hauteur pour que rien ne dépasse */
-    flex-wrap: nowrap; /* INTERDIT de sauter à la ligne */
-}
-
-/* Regroupement des éléments à droite */
 .nav-right-items {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 15px;
-    flex-shrink: 0; /* C'est CRUCIAL : ça empêche ce bloc de rétrécir ou de se déformer */
+    gap: 10px;
+    white-space: nowrap; /* Garde le texte sur une seule ligne */
 }
+
 
 /* LA LIGNE FINE DU BAS (Ligne 2) */
 .nav-sub {
