@@ -1156,3 +1156,34 @@ nav a:hover {
 .nav-search-select:hover {
     background-color: #dadada;
 }
+
+
+
+.livraison-container {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#valider-commande {
+    background-color: #febd69; /* Couleur orange style e-commerce */
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
