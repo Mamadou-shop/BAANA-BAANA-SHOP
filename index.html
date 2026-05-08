@@ -61,10 +61,28 @@
         </div>
 
         <div class="nav-delivery">
-            <i class="fas fa-map-marker-alt"></i>
-            <div class="nav-text">
-                <span class="nav-line-1">Votre adresse de livraison:</span>
-                <span class="nav-line-2">Sénégal</span>
+           <i class="fas fa-map-marker-alt"></i>
+<div class="nav-text">
+    <span class="nav-line-1">Votre adresse de livraison:</span>
+    <select id="select-region" onchange="chargerDepartements()" style="background: transparent; color: white; border: none; font-size: 14px; font-weight: bold; cursor: pointer;">
+        <option value="Dakar" selected>Dakar</option> <option value="Thiès">Thiès</option>
+        <option value="Diourbel">Diourbel</option>
+        <option value="Saint-Louis">Saint-Louis</option>
+        <option value="Fatick">Fatick</option>
+        <option value="Kaolack">Kaolack</option>
+        <option value="Ziguinchor">Ziguinchor</option>
+        <option value="Louga">Louga</option>
+        <option value="Tambacounda">Tambacounda</option>
+        <option value="Matam">Matam</option>
+        <option value="Kolda">Kolda</option>
+        <option value="Kaffrine">Kaffrine</option>
+        <option value="Sédhiou">Sédhiou</option>
+        <option value="Kédougou">Kédougou</option>
+    </select>
+    
+    <select id="select-departement" onchange="chargerCommunes()" style="display:none;"></select>
+    <select id="select-commune" style="display:none;"></select>
+</div>
             </div>
         </div>
 
