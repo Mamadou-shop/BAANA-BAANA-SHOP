@@ -722,7 +722,7 @@ nav a:hover {
     display: flex;
     width: 35% important;
     height: 40px;
-    margin: 0 15px; /* espace fixe de 15px sur les cotés  */ 
+    margin: 0 auto;  
     background-color: white;
     border-radius: 4px;
 }
