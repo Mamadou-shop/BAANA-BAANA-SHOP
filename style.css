@@ -689,68 +689,95 @@ nav a:hover {
 
 
 /* Barre principale noire */
+/* 1. GLOBAL : ALIGNEMENT PARFAIT SUR UNE LIGNE */
 .nav-main {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 5px 20px;
     background-color: #131921;
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
+    width: 100%;
+    height: 65px;
+}
+
+/* 2. TEXTES À DEUX LIGNES (Amazon Style) */
+.nav-line-1 {
+    font-size: 12px;
+    color: #ccc;
+    display: block;
+}
+
+.nav-line-2 {
+    font-size: 14px;
+    font-weight: bold;
     color: white;
+    display: block;
 }
 
-/* Alignement des textes (ligne 1 petite, ligne 2 grasse) */
-.nav-line-1 { font-size: 12px; color: #ccc; display: block; }
-.nav-line-2 { font-size: 14px; font-weight: bold; display: block; }
-
-/* Logo */
-.nav-logo a { 
-    color: white; 
-    font-size: 22px; 
-    font-weight: bold; 
-    text-decoration: none;
-    white-space: nowrap; /* AJOUTE CETTE LIGNE : Empêche Doux-Doux de se couper */
-    display: flex;       /* Pour aligner le texte et un éventuel petit logo */
-    align-items: center;
-}
-.nav-logo span { color: #febd69; }
-
-/* Adresse livraison */
-.nav-delivery {
-    display: flex;
-    align-items: center;
-    color: white;
-    margin-left: 15px;
-}
-}
-/* LA BARRE DE RECHERCHE */
+/* 3. BARRE DE RECHERCHE AVEC CATÉGORIES (30%) */
 .nav-search {
-    display: flex;
-    width: 30% !important; /* Ta demande spécifique */
+    display: flex !important;
+    width: 40% !important; /* Ta contrainte de 40% */
     height: 40px;
     background-color: white;
     border-radius: 4px;
     overflow: hidden;
-    margin: 0 10px; /* Petit espace de sécurité */
-}
-/* Optionnel : Ajustement pour que les éléments autour ne soient pas trop serrés */
-.nav-main {
-    display: flex;
-    justify-content: space-between; /* Aligne le logo à gauche, la recherche au centre, le panier à droite */
-    align-items: center;
+    margin: 0 10px;
 }
 
-.nav-search-categories {
+/* Le menu déroulant des catégories */
+.nav-search-category {
     background-color: #f3f3f3;
-    border-radius: 4px 0 0 4px;
+    width: 60px;
+    height: 100%;
     border: none;
-    padding: 0 5px;
+    border-right: 1px solid #ccc;
+    padding-left: 5px;
+    font-size: 12px;
     cursor: pointer;
 }
 
-.nav-search input {
-    flex-grow: 1;
+.nav-search-input {
+    flex: 1;
     border: none;
     padding: 0 10px;
-    font-size: 16px;
+    outline: none;
+}
+
+.nav-search-icon {
+    width: 45px;
+    background-color: #febd69;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #131921;
+    cursor: pointer;
+}
+
+/* 4. BLOCS DE DROITE (Drapeau, Compte, Panier) */
+.nav-right {
+    display: flex !important;
+    align-items: center !important;
+    gap: 15px;
+}
+
+.nav-signin, .nav-return, .nav-cart, .nav-language {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Style spécifique pour le panier avec l'icône */
+.nav-cart {
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-cart-count {
+    color: #f08804;
+    font-weight: bold;
+    margin-right: 5px;
 }
 
 .nav-search-btn {
