@@ -975,3 +975,13 @@ nav a:hover {
 
 
 
+
+/* Redimensionner le drapeau pour qu'il tienne dans la barre de navigation */
+.nav-flag {
+    width: 30px; /* Ou la taille que tu souhaites pour un petit icône */
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
