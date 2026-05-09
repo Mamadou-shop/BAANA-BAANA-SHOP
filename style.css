@@ -720,7 +720,7 @@ nav a:hover {
 /* LA BARRE DE RECHERCHE */
 .nav-search {
     display: flex;
-    width: 50%;           /* Elle prendra la moitié de l'écran (ajuste à 40% si tu la veux plus petite) */
+    width: 40%;           /* Elle prendra la moitié de l'écran (ajuste à 40% si tu la veux plus petite) */
     margin: 0 auto;       /* Le "auto" permet de la centrer parfaitement au milieu */
     height: 40px;
     background-color: white;
