@@ -686,126 +686,30 @@ nav a:hover {
     color: #c45500; /* Orange Amazon */
 }
 
-/* 691. Barre principale noire - Nettoyage complet */
+/* Style de la barre principale (Ligne 1) */
 .nav-main {
+    background-color: #131921;
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
     justify-content: space-between !important;
-    padding: 0 20px;
-    background-color: #131921;
-    width: 100%;
+    padding: 0 15px;
     height: 65px;
+    width: 100%;
     box-sizing: border-box;
 }
 
-.nav-left-group {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.nav-search {
-    display: flex !important;
-    width: 30% !important; 
-    height: 40px;
-    background-color: white;
-    border-radius: 4px;
-    overflow: hidden;
-    margin: 0 10px;
-}
-
-.nav-right-group {
+.nav-right-items {
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
     gap: 15px;
 }
 
-.nav-line-1 {
-    font-size: 12px;
-    color: #ccc;
-    display: block;
-}
-
-.nav-line-2 {
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
-    display: block;
-}
-
-.nav-signin, .nav-return, .nav-cart, .nav-language {
+.nav-right-items div {
     display: flex;
     flex-direction: column;
-    color: white;
-    text-decoration: none;
-    white-space: nowrap;
 }
-
-.nav-cart {
-    flex-direction: row;
-    align-items: center;
-    position: relative;
-}
-
-
-#cart-count {
-    position: absolute;
-    top: -8px;       /* Ajuste pour placer le chiffre sur l'anse du panier */
-    right: 15px;     /* Ajuste selon la position de ton icône */
-    background-color: #f08804; /* Orange Amazon */
-    color: white;
-    border-radius: 50%;
-    padding: 1px 6px;
-    font-size: 14px;
-    font-weight: bold;
-    min-width: 15px;
-    text-align: center;
-    z-index: 10;
-}
-}
-
-/* Optionnel : changer la couleur de ".sn" dans le logo pour l'assortir */
-.nav-logo span {
-    color: #87CEEB;
-}
-
-.btn-add-cart {
-    background-color: #ffd814; /* Jaune Amazon */
-    border: 1px solid #fcd200;
-    border-radius: 20px;
-    padding: 8px 15px;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.btn-add-cart:hover {
-    background-color: #f7ca00;
-}
-
-
-/* Style de la barre principale (Ligne 1) */
-.nav-main {
-    background-color: #131921;
-    display: flex;
-    flex-direction: row; /* Force la ligne droite */
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 15px;
-    height: 65px;
-    flex-wrap: nowrap; /* Empêche absolument de descendre à la ligne */
-}
-.nav-right-items {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    white-space: nowrap; /* Garde le texte sur une seule ligne */
-}
-
 
 /* LA LIGNE FINE DU BAS (Ligne 2) */
 .nav-sub {
