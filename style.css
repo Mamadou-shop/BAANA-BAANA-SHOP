@@ -720,11 +720,12 @@ nav a:hover {
 /* LA BARRE DE RECHERCHE */
 .nav-search {
     display: flex;
-    width: 35% important;
+    flex: 1; /* C'est ce paramètre qui permet à la barre de s'étirer au milieu */
     height: 40px;
-    margin: 0 auto;  
+    margin: 0 15px; /* Un petit espace pour ne pas étouffer l'adresse à gauche */
     background-color: white;
     border-radius: 4px;
+    overflow: hidden; /* Pour que le bouton loupe orange ne dépasse pas */
 }
 
 .nav-search-categories {
