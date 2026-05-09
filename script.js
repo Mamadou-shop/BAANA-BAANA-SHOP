@@ -1,9 +1,11 @@
-// 1. Ta liste de 50 produits avec des prix réalistes
+// ==========================================
+// 1. CATALOGUE DES PRODUITS (54 ARTICLES)
+// ==========================================
 const catalogueDouxDoux = [
     { id: 1, titre: "Écouteurs Bluetooth", prix: "15.000", cat: "Equipement", img: "https://i.pinimg.com/1200x/f1/43/da/f143da04925eed47c677e31d5c2149d4.jpg" },
     { id: 2, titre: "Montre Quartz", prix: "10.000", cat: "Textile-Mode", img: "https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=600" },
     { id: 3, titre: "Chargeur Rapide Type-C", prix: "5.000", cat: "Equipement", img: "https://i.pinimg.com/1200x/e5/41/24/e54124d86ab0362870d271ffb78e275b.jpg" },
-    { id: 4, titre: "Clé USB 64Go", prix: "4.500",cat: "Equipement", img: "https://i.pinimg.com/736x/79/d6/bd/79d6bd675ec0090fdd54fc65ec9e00db.jpg" },
+    { id: 4, titre: "Clé USB 64Go", prix: "4.500", cat: "Equipement", img: "https://i.pinimg.com/736x/79/d6/bd/79d6bd675ec0090fdd54fc65ec9e00db.jpg" },
     { id: 5, titre: "Powerbank 10000mAh", prix: "12.500", cat: "Equipement", img: "https://i.pinimg.com/736x/48/bb/af/48bbaf4548f7c0d45026b3741bcf3132.jpg" },
     { id: 6, titre: "Souris Sans Fil", prix: "3.500", cat: "Equipement", img: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&q=80" },
     { id: 7, titre: "T-shirt Coton", prix: "4.000", cat: "Textile-Mode", img: "https://i.pinimg.com/736x/27/4c/78/274c78deb9aaec0dbea20f60d6e8133a.jpg" },
@@ -30,18 +32,18 @@ const catalogueDouxDoux = [
     { id: 28, titre: "Manette PC/Android", prix: "11.000", cat: "Equipement", img: "https://i.pinimg.com/736x/28/8e/29/288e29982e1cdfa01e1aba6b62e74d3c.jpg" },
     { id: 29, titre: "Webcam HD", prix: "14.500", cat: "Equipement", img: "https://dakarstock.com/wp-content/uploads/2024/04/logitech-webcam-c920-hd-pro-2.jpg" },
     { id: 30, titre: "Répéteur WiFi", prix: "13.000", cat: "Equipement", img: "https://i.pinimg.com/736x/c2/4b/32/c24b32f44fad8b40c6d7d4e923ddebf9.jpg" },
-    { id: 31, titre: "Livre de poche  ", prix: "3.000", cat: "Equipement", img: "https://i.pinimg.com/736x/df/27/c9/df27c9b5c6437116b4c94b0d5f9bc1e2.jpg" },
+    { id: 31, titre: "Livre de poche", prix: "3.000", cat: "Equipement", img: "https://i.pinimg.com/736x/df/27/c9/df27c9b5c6437116b4c94b0d5f9bc1e2.jpg" },
     { id: 32, titre: "Porte-monnaie Cuir", prix: "7.500", cat: "Textile-Mode", img: "https://i.pinimg.com/736x/95/d7/c0/95d7c0bb7a3f211b5634a7b02c4b9fd2.jpg" },
     { id: 33, titre: "Ceinture Homme", prix: "4.500", cat: "Textile-Mode", img: "https://i.pinimg.com/1200x/62/15/e8/6215e89fde2608f85f154d3b0dd24ba7.jpg" },
     { id: 34, titre: "Kit Pinceaux Maquillage", prix: "6.500", cat: "Textile-Mode", img: "https://i.pinimg.com/736x/d6/7f/a8/d67fa83aa0a1819476f057152cd88fa3.jpg" },
     { id: 35, titre: "Miroir LED", prix: "8.000", cat: "Textile-Mode", img: "https://i.pinimg.com/736x/83/a2/36/83a236865a36f24b6d0e4e6ac0945606.jpg" },
     { id: 36, titre: "Support PC Ventilé", prix: "10.500", cat: "Equipement", img: "https://i.pinimg.com/1200x/8c/74/16/8c7416a710f9c1fcc162c95ab0246e07.jpg" },
-    { id: 37, titre: "Sacoche Ordinateur", prix: "5000", cat: "Equipement", img: "https://i.pinimg.com/736x/3c/cb/c7/3ccbc725b7eda52eca5e0ab8197b19b1.jpg" },
+    { id: 37, titre: "Sacoche Ordinateur", prix: "5.000", cat: "Equipement", img: "https://i.pinimg.com/736x/3c/cb/c7/3ccbc725b7eda52eca5e0ab8197b19b1.jpg" },
     { id: 38, titre: "Balance de cuisine", prix: "5.500", cat: "Equipement", img: "https://i.pinimg.com/736x/2d/c7/6b/2dc76bb7c070cc8fabfc9cb1e2a55a2c.jpg" },
     { id: 39, titre: "Machine à café Mini", prix: "25.000", cat: "Equipement", img: "https://i.pinimg.com/1200x/49/f8/73/49f8734f57df45b0394cbb396cc4b475.jpg" },
     { id: 40, titre: "Rasoir Électrique", prix: "14.000", cat: "Textile-Mode", img: "https://i.pinimg.com/736x/aa/e1/3c/aae13c5ca3cf5654b96900d9ab518397.jpg" },
     { id: 41, titre: "Veilleuse Enfant", prix: "4.000", cat: "Equipement", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvGeeAa2gZ2P5UT8rqRHxuQJTy1Bj3_fqzoA&s" },
-    { id: 42, titre: "Hub USB 4 Ports", prix: "3.500", cat: "Equipement",img: "https://i.pinimg.com/1200x/94/52/68/9452689f07b39335e99c7f236b600ee9.jpg" },
+    { id: 42, titre: "Hub USB 4 Ports", prix: "3.500", cat: "Equipement", img: "https://i.pinimg.com/1200x/94/52/68/9452689f07b39335e99c7f236b600ee9.jpg" },
     { id: 43, titre: "Carte Mémoire 32Go", prix: "3.000", cat: "Equipement", img: "https://i.pinimg.com/1200x/e6/f6/03/e6f603dc0eaeae17b3995ae0b3630d7e.jpg" },
     { id: 44, titre: "Bracelet Sport", prix: "2.000", cat: "Textile-Mode", img: "https://i.pinimg.com/736x/1c/42/41/1c42417c12dd8be429cc0f102d3b6a48.jpg" },
     { id: 45, titre: "Organisateur de câbles", prix: "1.500", cat: "Equipement", img: "https://i.pinimg.com/1200x/a5/15/e4/a515e492067a515034bf8c91388b3a6d.jpg" },
@@ -50,21 +52,28 @@ const catalogueDouxDoux = [
     { id: 48, titre: "Piles Rechargeables x4", prix: "5.000", cat: "Equipement", img: "https://i.pinimg.com/1200x/89/60/92/896092e2b9353a4b398543d6bc938f81.jpg" },
     { id: 49, titre: "Radio Portable", prix: "8.500", cat: "Equipement", img: "https://i.pinimg.com/736x/f9/32/cb/f932cbcd7fa328efbe07d1fb500cd064.jpg" },
     { id: 50, titre: "Thermomètre Digital", prix: "2.500", cat: "Equipement", img: "https://i.pinimg.com/1200x/3f/5b/ce/3f5bce6a09f7ac7cd71e5f6c26780131.jpg" },
- { id: 51, titre: "Mouton Ladoum", prix: "350.000", cat: "Marche-Frais", img: "https://images.unsplash.com/photo-1511117833452-472d9d2d7617?w=300" },
- { id: 52, titre: "Sac de Riz 50kg", prix: "22.500", cat: "Alimentation", img: "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=300" },
- { id: 53, titre: "Thiof Frais (KG)", prix: "6.500", cat: "Marche-Frais", img: "https://images.unsplash.com/photo-1534604973900-c41ab4c58f96?w=300" },
- { id: 54, titre: "Panneau Solaire 200W", prix: "75.000", cat: "BTP-Energie", img: "https://images.unsplash.com/photo-1509391366360-fe5bb6583e23?w=300" }
-    
+    { id: 51, titre: "Mouton Ladoum", prix: "350.000", cat: "Marche-Frais", img: "https://images.unsplash.com/photo-1511117833452-472d9d2d7617?w=300" },
+    { id: 52, titre: "Sac de Riz 50kg", prix: "22.500", cat: "Alimentation", img: "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=300" },
+    { id: 53, titre: "Thiof Frais (KG)", prix: "6.500", cat: "Marche-Frais", img: "https://images.unsplash.com/photo-1534604973900-c41ab4c58f96?w=300" },
+    { id: 54, titre: "Panneau Solaire 200W", prix: "75.000", cat: "BTP-Energie", img: "https://images.unsplash.com/photo-1509391366360-fe5bb6583e23?w=300" }
 ];
+
+// ==========================================
+// 2. VARIABLES ET ÉTAT GLOBAL
+// ==========================================
 let panier = [];
-// 1. Fonction pour filtrer et afficher les produits
+let slideIndex = 0;
+
+// ==========================================
+// 3. FONCTIONS D'AFFICHAGE ET FILTRAGE
+// ==========================================
 function filtrerProduits(categorie) {
     const grille = document.getElementById("product-grid");
     if (!grille) return;
 
-    grille.innerHTML = ""; // On vide la grille pour charger les nouveaux produits
+    grille.innerHTML = ""; 
 
-    const produitsAffiches = categorie === 'Tous' 
+    const produitsAffiches = (categorie === 'Tous' || categorie === 'all') 
         ? catalogueDouxDoux 
         : catalogueDouxDoux.filter(p => p.cat === categorie);
 
@@ -78,233 +87,181 @@ function filtrerProduits(categorie) {
                     <span class="category-tag">${p.cat}</span>
                     <h3 class="product-title">${p.titre}</h3>
                     <p class="product-price"><strong>${p.prix} FCFA</strong></p>
-                   <div class="payment-buttons">
-                   <button class="btn-add-cart" onclick="ajouterAuPanier('${p.titre}', ${p.prix})">
-                      Ajouter au panier
-                   </button>
-                   <button class="btn-pay btn-wave" onclick="window.location.href='#'">Wave</button>
-                   <button class="btn-pay btn-om" onclick="window.location.href='#'">Orange Money</button>
-                  </div>
-                  
+                    <div class="payment-buttons">
+                        <button class="btn-add-cart" onclick="ajouterAuPanier('${p.titre}', '${p.prix}')">
+                          Ajouter au panier
+                        </button>
+                        <button class="btn-pay btn-wave" onclick="ouvrirPaiement('${p.titre}')">Wave</button>
+                        <button class="btn-pay btn-om" onclick="ouvrirPaiement('${p.titre}')">Orange Money</button>
+                    </div>
                 </div>
             </div>`;
     });
 }
 
-// 2. Lancement automatique au chargement de la page
-window.onload = () => filtrerProduits('Tous');
-
-// 3. Gestion du menu mobile
-function toggleMenu() {
-    const menu = document.getElementById("side-menu");
-    const overlay = document.getElementById("overlay");
-    if (menu) {
-        if (menu.style.width === "280px") {
-            menu.style.width = "0";
-            if (overlay) overlay.style.display = "none";
-        } else {
-            menu.style.width = "280px";
-            if (overlay) overlay.style.display = "block";
-
-
-            function ajouterAuPanier(titre, prix) {
+// ==========================================
+// 4. GESTION DU PANIER
+// ==========================================
+function ajouterAuPanier(titre, prix) {
     panier.push({ titre: titre, prix: prix });
-    
-    // Met à jour le chiffre sur ton panier bleu ciel
     const compteur = document.getElementById('cart-count');
     if (compteur) {
         compteur.innerText = panier.length;
+        compteur.style.transform = "scale(1.3)";
+        setTimeout(() => compteur.style.transform = "scale(1)", 200);
     }
-    
-    alert(titre + " a été ajouté au panier !");
-}
-        }
-    }
+    alert(titre + " ajouté au panier !");
 }
 
-
-// 1. On déclare la variable une seule fois proprement
-let slideIndex = 0;
-
-// 2. Fonction pour le défilement automatique
-function showSlides() {
-    const slidesContainer = document.querySelector('.slides');
-    const allSlides = document.querySelectorAll('.slide');
-    
-    if (slidesContainer && allSlides.length > 0) {
-        slideIndex++;
-        if (slideIndex >= allSlides.length) { slideIndex = 0; }
-        
-        // Utilise bien les backticks ` (touche 7 ou près de Entrée)
-        slidesContainer.style.transform = `translateX(${-slideIndex * 100}%)`;
-    }
-}
-
-// 3. Lancement de l'intervalle (toutes les 5 secondes)
-setInterval(showSlides, 5000);
-
-function moveSlide(n) {
-    const slidesContainer = document.querySelector('.slides');
-    const allSlides = document.querySelectorAll('.slide');
-
-    if (slidesContainer && allSlides.length > 0) {
-        slideIndex += n;
-
-        // Gestion de la boucle infinie
-        if (slideIndex >= allSlides.length) { slideIndex = 0; }
-        if (slideIndex < 0) { slideIndex = allSlides.length - 1; }
-
-        // Déplacement de la bande d'images
-        slidesContainer.style.transform = `translateX(${-slideIndex * 100}%)`;
-    }
-}
-
-
-let nombreArticles = 0; // On commence à zéro
-
-function ajouterAuPanier(titre, prix) {
-    // 1. On augmente le compteur
-    nombreArticles++;
-
-    // 2. On cherche l'élément HTML du chiffre
-    const compteurHTML = document.getElementById('cart-count');
-
-    // 3. On met à jour le texte affiché
-    if (compteurHTML) {
-        compteurHTML.innerText = nombreArticles;
-        
-        // Petit effet visuel : le chiffre grossit un peu quand on ajoute
-        compteurHTML.style.transform = "scale(1.2)";
-        setTimeout(() => {
-            compteurHTML.style.transform = "scale(1)";
-        }, 200);
-    }
-
-    // Optionnel : Alerte pour confirmer
-    console.log("Ajouté : " + titre + " au prix de " + prix + " FCFA");
-}
-
-
-// Fonction pour filtrer et afficher les résultats
+// ==========================================
+// 5. RECHERCHE
+// ==========================================
 function executerRecherche() {
-    const saisie = document.querySelector('.nav-search-input').value.toLowerCase().trim();
+    const input = document.getElementById('search-input') || document.querySelector('.nav-search-input');
+    if (!input) return;
+    const saisie = input.value.toLowerCase().trim();
     
-    // On filtre sur le titre OU la catégorie
-    const resultats = tousLesProduits.filter(p => 
+    const resultats = catalogueDouxDoux.filter(p => 
         p.titre.toLowerCase().includes(saisie) || 
         p.cat.toLowerCase().includes(saisie)
     );
 
-    afficherProduits(resultats); // On réutilise ta fonction d'affichage
+    const grille = document.getElementById("product-grid");
+    grille.innerHTML = "";
+    resultats.forEach(p => {
+        grille.innerHTML += `
+            <div class="product-card">
+                <div class="product-image"><img src="${p.img}"></div>
+                <div class="product-info">
+                    <span class="category-tag">${p.cat}</span>
+                    <h3 class="product-title">${p.titre}</h3>
+                    <p class="product-price"><strong>${p.prix} FCFA</strong></p>
+                    <button class="btn-add-cart" onclick="ajouterAuPanier('${p.titre}', '${p.prix}')">Ajouter</button>
+                </div>
+            </div>`;
+    });
 }
 
-// Écouteur pour la touche "Entrée" dans la barre
-document.querySelector('.nav-search-input').addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-        executerRecherche();
-    }
-});
+// ==========================================
+// 6. GESTION DU SLIDER
+// ==========================================
+function moveSlide(n) {
+    const slidesContainer = document.querySelector('.slides');
+    const allSlides = document.querySelectorAll('.slide');
+    if (!slidesContainer || allSlides.length === 0) return;
 
+    slideIndex += n;
+    if (slideIndex >= allSlides.length) slideIndex = 0;
+    if (slideIndex < 0) slideIndex = allSlides.length - 1;
 
+    slidesContainer.style.transform = `translateX(${-slideIndex * 100}%)`;
+}
 
-// Écouteur pour le clic sur le bouton loupe
-document.querySelector('.nav-search-icon').addEventListener('click', executerRecherche);
+function autoSlider() { moveSlide(1); }
+setInterval(autoSlider, 5000);
 
+// ==========================================
+// 7. MENU MOBILE ET MODALES
+// ==========================================
+function toggleMenu() {
+    const menu = document.getElementById("side-menu");
+    const overlay = document.getElementById("overlay");
+    if (!menu) return;
 
-
-// Fonction de filtrage par catégorie
-function filtrerParCategorie(categorieChoisie) {
-    if (categorieChoisie === "all" || categorieChoisie === "Toutes nos catégories") {
-        afficherProduits(tousLesProduits);
+    if (menu.style.width === "280px") {
+        menu.style.width = "0";
+        if (overlay) overlay.style.display = "none";
     } else {
-        const filtres = tousLesProduits.filter(p => p.cat === categorieChoisie);
-        afficherProduits(filtres);
+        menu.style.width = "280px";
+        if (overlay) overlay.style.display = "block";
     }
 }
 
-// Lier le menu déroulant (le <select>)
-document.querySelector('.nav-search-select').addEventListener('change', (e) => {
-    // Note : assure-toi que les 'value' de tes <option> correspondent aux 'cat' (ex: "Equipement")
-    filtrerParCategorie(e.target.value);
-});
+function ouvrirPaiement(titre) {
+    const modal = document.getElementById('payment-modal');
+    if (modal) modal.style.display = 'block';
+}
 
+function closePayment() {
+    const modal = document.getElementById('payment-modal');
+    if (modal) modal.style.display = 'none';
+}
 
-
-
+// ==========================================
+// 8. CARTE DU SÉNÉGAL (LIVRAISON)
+// ==========================================
 const senegalMap = {
     "Dakar": {
-        "Dakar": ["Plateau", "Médina", "Fass-Colobane-Gueule Tapée", "Fann-Point E-Amitié", "Gorée", "Grand Dakar", "Biscuiterie", "HLM", "Hann Bel-Air", "Sicap Liberté", "Dieuppeul-Derklé", "Grand Yoff", "Patte d'Oie", "Parcelles Assainies", "Cambérène", "Ngor", "Ouakam", "Yoff", "Mermoz-Sacré-Cœur"],
+        "Dakar": ["Plateau", "Médina", "Fass-Colobane", "Fann-Point E", "Gorée", "Grand Dakar", "Biscuiterie", "HLM", "Hann Bel-Air", "Sicap Liberté", "Dieuppeul-Derklé", "Grand Yoff", "Patte d'Oie", "Parcelles Assainies", "Cambérène", "Ngor", "Ouakam", "Yoff", "Mermoz-Sacré-Cœur"],
         "Guédiawaye": ["Golf Sud", "Sam Notaire", "Ndiarème Limamoulaye", "Wakhinane Nimzatt", "Médina Gounass"],
         "Pikine": ["Pikine Est", "Pikine Nord", "Pikine Ouest", "Dalifort", "Djidah Thiaroye Kao", "Guinaw Rail Nord", "Guinaw Rail Sud", "Tivaouane Diacksao", "Diamaguène Sicap Mbao", "Mbao", "Thiaroye-sur-Mer", "Thiaroye Gare"],
         "Rufisque": ["Rufisque Est", "Rufisque Nord", "Rufisque Ouest", "Bargny", "Sendou", "Diamniadio", "Sébikotane", "Sangalkam", "Bambylor", "Yène", "Tivaouane Peulh-Niaga"],
-        "Keur Massar": ["Keur Massar Nord", "Keur Massar Sud", "Malika", "Yeumbeul Nord", "Yeumbeul Sud", "Jaxaay-Parcelles-Niakoul Rab"]
+        "Keur Massar": ["Keur Massar Nord", "Keur Massar Sud", "Malika", "Yeumbeul Nord", "Yeumbeul Sud", "Jaxaay-Parcelles"]
     },
     "Thiès": {
-        "Thiès": ["Thiès Est", "Thiès Nord", "Thiès Ouest", "Khombole", "Pout", "Keur Moussa", "Diender Guedji", "Fandène", "Notto", "Thiénaba", "Touba Toul"],
-        "Mbour": ["Mbour", "Joal-Fadiouth", "Saly Portudal", "Ngaparou", "Somone", "Nguékhokh", "Diass", "Sindia", "Malicounda", "Sandiara", "Fissel", "Ndiaganiao", "Nguéniène", "Sessène"],
-        "Tivaouane": ["Tivaouane", "Mékhé", "Mboro", "Darou Khoudoss", "Taïba Ndiaye", "Meouane", "Mérina Dakhar", "Niakhène", "Pambal", "Notto Gouye Diama", "Pire Goureye", "Cherif Lo", "Mont-Rolland", "Ngandiouf"]
+        "Thiès": ["Thiès Est", "Thiès Nord", "Thiès Ouest", "Khombole", "Pout", "Keur Moussa", "Fandène"],
+        "Mbour": ["Mbour", "Joal-Fadiouth", "Saly Portudal", "Ngaparou", "Somone", "Nguékhokh", "Diass", "Sindia", "Malicounda"],
+        "Tivaouane": ["Tivaouane", "Mékhé", "Mboro", "Darou Khoudoss", "Taïba Ndiaye"]
     },
     "Diourbel": {
-        "Diourbel": ["Diourbel", "Dankh Sène", "Gade Escale", "Ndindy", "Ndoulo", "Ngohé", "Patar", "Tocky Gare", "Touré Mbonde"],
-        "Bambey": ["Bambey", "Baba Garage", "Dinguiraye", "Keur Samba Kane", "Lambaye", "Ngogom", "Réfane", "Thiakhar", "Gawane", "Ngoye"],
-        "Mbacké": ["Mbacké", "Touba Mosquée", "Dalla Ngabou", "Missirah", "Taïba Thiékène", "Touba Fall", "Kael", "Madina", "Ndame", "Sadio", "Taïf"]
+        "Diourbel": ["Diourbel", "Ndindy", "Ndoulo", "Tocky Gare"],
+        "Bambey": ["Bambey", "Baba Garage", "Lambaye", "Ngogom", "Réfane"],
+        "Mbacké": ["Mbacké", "Touba Mosquée", "Touba Fall", "Taïf", "Sadio"]
     },
     "Saint-Louis": {
-        "Saint-Louis": ["Saint-Louis", "Mpal", "Gandon", "Ndebène Gandiol", "Fass Ngom"],
-        "Dagana": ["Dagana", "Richard-Toll", "Rosso Sénégal", "Ross Béthio", "Gaé", "Mbane", "Ronkh", "Diama", "Bokhol"],
-        "Podor": ["Podor", "Ndioum", "Golléré", "Niandane", "Mboumba", "Guédé Chantier", "Démette", "Galoya Toucouleur", "Aéré Lao", "Médina Ndiathbé", "Walaldé", "Cas-Cas", "Fanaye", "Doumga Lao", "Gamadji Saré", "Guédé Village", "Méry", "Ndiayene Pendao"]
+        "Saint-Louis": ["Saint-Louis", "Mpal", "Gandon", "Fass Ngom"],
+        "Dagana": ["Dagana", "Richard-Toll", "Rosso Sénégal", "Ross Béthio", "Mbane"],
+        "Podor": ["Podor", "Ndioum", "Mboumba", "Guédé Chantier", "Aéré Lao"]
     },
     "Fatick": {
-        "Fatick": ["Fatick", "Diofior", "Diakhao", "Ndiob", "Niakhar", "Ngayokhème", "Mbellacadiao", "Thiaré Ndialgui", "Diarrère", "Fimela", "Loul Sessène", "Djilasse", "Tattaguine"],
-        "Foundiougne": ["Foundiougne", "Passy", "Sokone", "Karang Poste", "Soum", "Toubacouta", "Keur Samba Guèye", "Keur Saloum Diané", "Djilor", "Diossong", "Mbam", "Niassène", "Bassoul", "Dionewar", "Djirnda"],
-        "Gossas": ["Gossas", "Colobane", "Mbar", "Ndiène Lagane", "Ouadiour", "Patar Lia"]
+        "Fatick": ["Fatick", "Diofior", "Niakhar", "Fimela", "Tattaguine"],
+        "Foundiougne": ["Foundiougne", "Passy", "Sokone", "Karang Poste", "Toubacouta"],
+        "Gossas": ["Gossas", "Colobane", "Mbar"]
     },
     "Kaolack": {
-        "Kaolack": ["Kaolack", "Gandiaye", "Kahone", "Ndoffane", "Keur Baka", "Keur Socé", "Latmingué", "Ndiaffate", "Thiaré", "Ndiedieng"],
-        "Nioro du Rip": ["Nioro du Rip", "Keur Madiabel", "Dabaly", "Darou Salam", "Gainth Kaye", "Kayemor", "Médina Sabakh", "Ndramé Escale", "Ngayène Sabakh", "Paoskoto", "Porokhane", "Taïba Niassène", "Wack Ngouna"],
-        "Guinguinéo": ["Guinguinéo", "Fass", "Mboss", "Khelcom Birane", "Mayébel Cabe", "Ngathie Naoudé", "Nguélou", "Ourour", "Panal Wolof", "Gagnick"]
+        "Kaolack": ["Kaolack", "Gandiaye", "Kahone", "Ndoffane"],
+        "Nioro du Rip": ["Nioro du Rip", "Keur Madiabel", "Porokhane", "Médina Sabakh"],
+        "Guinguinéo": ["Guinguinéo", "Mboss", "Fass"]
     },
     "Ziguinchor": {
-        "Ziguinchor": ["Ziguinchor", "Niaguis", "Adéane", "Enampore", "Nyassia"],
-        "Bignona": ["Bignona", "Thionck-Essyl", "Diouloulou", "Abéné", "Kafountine", "Oulampane", "Sindian", "Tenghory", "Balingore", "Coubalan", "Diegoune", "Djilaky", "Djinaky", "Kataba 1", "Mangagoulack", "Mlomp", "Niamone", "Ouonck", "Suelle"],
-        "Oussouye": ["Oussouye", "Diembéring (Cap Skirring)", "Mlomp", "Santhiaba Manjacque", "Oukout"]
+        "Ziguinchor": ["Ziguinchor", "Niaguis", "Adéane", "Enampore"],
+        "Bignona": ["Bignona", "Thionck-Essyl", "Diouloulou", "Kafountine", "Abéné"],
+        "Oussouye": ["Oussouye", "Cap Skirring", "Mlomp"]
     },
     "Louga": {
-        "Louga": ["Louga", "Coki", "Léona", "Nguidilé", "Niomré", "Sakal", "Ngueune Sarr", "Keur Momar Sarr", "Syer", "Mbédiéne", "Peté Ouarkhokh"],
-        "Kébémer": ["Kébémer", "Guéoul", "Bandègne Ouolof", "Diokoul Diawrigne", "Kab Gaye", "Thieppe", "Ndande", "Ngourane", "Sagatta Gueth", "Touba Mérina"],
-        "Linguère": ["Linguère", "Dahra", "Barkédji", "Dodji", "Gassane", "Sagatta Djolof", "Yang-Yang", "Boulal", "Kamb", "Ouarkhokh", "Affé Djolof", "Mboula"]
+        "Louga": ["Louga", "Coki", "Sakal", "Léona"],
+        "Kébémer": ["Kébémer", "Guéoul", "Ndande", "Sagatta Gueth"],
+        "Linguère": ["Linguère", "Dahra", "Barkédji", "Yang-Yang"]
     },
     "Tambacounda": {
-        "Tambacounda": ["Tambacounda", "Koulor", "Missirah", "Niani Toucouleur", "Sinthiou Malème", "Dialacoto", "Makacolibantang", "Ndoga Babacar"],
-        "Bakel": ["Bakel", "Diawara", "Kidira", "Ballou", "Gabou", "Moudéry", "Sadatou", "Sinthiou Fissa", "Bélé", "Tumani Toumani"],
-        "Goudiry": ["Goudiry", "Bala", "Boynguel Bamba", "Dianké Makha", "Dougué", "Koussan", "Sinthiou Mamadou Boubou", "Bani Ismaël", "Koar", "Koulor"],
-        "Koumpentoum": ["Koumpentoum", "Malem Niani", "Bamba Thialène", "Kouthiaba Wolof", "Ndame", "Payar", "Mereto", "Pass Koto"]
+        "Tambacounda": ["Tambacounda", "Missirah", "Sinthiou Malème"],
+        "Bakel": ["Bakel", "Kidira", "Diawara"],
+        "Goudiry": ["Goudiry", "Bala", "Koussan"],
+        "Koumpentoum": ["Koumpentoum", "Malem Niani"]
     },
     "Matam": {
-        "Matam": ["Matam", "Ourossogui", "Thilogne", "Agnam Civol", "Bokidiawé", "Nabadji Civol", "Ogo"],
-        "Kanel": ["Kanel", "Waoundé", "Dembancané", "Hamady Ounaré", "Sinthiou Bamambé-Banadji", "Semmé", "Ndendory", "Orkadiéré", "Aouré", "Bokiladji"],
-        "Ranérou": ["Ranérou", "Lougré Thioly", "Oudalaye", "Vélingara Ferlo"]
+        "Matam": ["Matam", "Ourossogui", "Thilogne", "Agnam Civol"],
+        "Kanel": ["Kanel", "Waoundé", "Semmé", "Orkadiéré"],
+        "Ranérou": ["Ranérou", "Vélingara Ferlo"]
     },
     "Kolda": {
-        "Kolda": ["Kolda", "Dabo", "Salikégné", "Saré Bidji", "Dioulacolon", "Médina El Hadji", "Mampatim", "Bagadadji", "Coumbacara"],
-        "Vélingara": ["Vélingara", "Kounkané", "Diaobé-Kabendou", "Médina Gounass", "Bonconto", "Kandia", "Linkéring", "Paroumba", "Némataba", "Ouassadou", "Saré Coly Sallé"],
-        "Médina Yoro Foulah": ["Médina Yoro Foulah", "Pata", "Fafacourou", "Ndorna", "Niaming", "Bourouco", "Kerewane"]
+        "Kolda": ["Kolda", "Dabo", "Salikégné", "Saré Bidji"],
+        "Vélingara": ["Vélingara", "Kounkané", "Diaobé-Kabendou", "Médina Gounass"],
+        "Médina Yoro Foulah": ["Médina Yoro Foulah", "Pata"]
     },
     "Kaffrine": {
-        "Kaffrine": ["Kaffrine", "Nganda", "Boulel", "Diamagadio", "Diockoul Mbelbouck", "Gniby", "Kahi", "Kathiotte", "Médinatoul Salam 2"],
-        "Birkelane": ["Birkelane", "Diamal", "Keur Mbouki", "Mabo", "Mbeuleup", "Ndiognick", "Ségré Gatta", "Touba Mbella"],
-        "Koungheul": ["Koungheul", "Fass Thiékène", "Ida Mouride", "Lour Escale", "Maka Yop", "Missirah Wadène", "Ngainthe Pathé", "Saly Escale"],
-        "Malem Hodar": ["Malem Hodar", "Darou Minam 2", "Dianké Souf", "Khelcom", "Ndioum Ngainthe", "Ndiobène Samba Lamo", "Sagna"]
+        "Kaffrine": ["Kaffrine", "Nganda", "Birkelane"],
+        "Koungheul": ["Koungheul", "Missirah Wadène"],
+        "Malem Hodar": ["Malem Hodar", "Sagna"]
     },
     "Sédhiou": {
-        "Sédhiou": ["Sédhiou", "Marsassoum", "Diannah Malary", "Bambali", "Diendé", "Oudoucar", "Djibabouya", "Djiredji", "Koussy", "Sakar"],
-        "Bounkiling": ["Bounkiling", "Madina Wandifa", "Ndiamacouta", "Boghal", "Tankon", "Bona", "Diambati", "Faoune", "Kandion Mangana"],
-        "Goudomp": ["Goudomp", "Tanaff", "Samine", "Diattacounda", "Karantaba", "Simbandi Brassou", "Baghere", "Djibanar", "Kaour", "Simbandi Balante"]
+        "Sédhiou": ["Sédhiou", "Marsassoum", "Bambali"],
+        "Bounkiling": ["Bounkiling", "Madina Wandifa"],
+        "Goudomp": ["Goudomp", "Tanaff"]
     },
     "Kédougou": {
-        "Kédougou": ["Kédougou", "Bandafassi", "Dindéfélo", "Ninefesha", "Tomboronkoto", "Fongolimbi"],
-        "Saraya": ["Saraya", "Bembou", "Sabodala", "Missirah Sirimana", "Khossanto"],
-        "Salémata": ["Salémata", "Dakateli", "Ethiolo", "Kevoye", "Oubadji"]
+        "Kédougou": ["Kédougou", "Bandafassi", "Salémata"],
+        "Saraya": ["Saraya", "Sabodala", "Bembou"]
     }
 };
 
@@ -313,14 +270,11 @@ function chargerDepartements() {
     const deptSelect = document.getElementById('select-departement');
     const commSelect = document.getElementById('select-commune');
     
-    // On réinitialise les menus
     deptSelect.innerHTML = '<option value="">-- Département --</option>';
     commSelect.innerHTML = '<option value="">-- Commune --</option>';
 
     if (region && senegalMap[region]) {
-        // On affiche le menu département s'il était caché
-        deptSelect.style.display = "block"; 
-        
+        deptSelect.style.display = "block";
         for (let dept in senegalMap[region]) {
             let opt = document.createElement("option");
             opt.value = dept;
@@ -338,9 +292,7 @@ function chargerCommunes() {
     commSelect.innerHTML = '<option value="">-- Commune --</option>';
 
     if (dept && senegalMap[region][dept]) {
-        // On affiche le menu commune s'il était caché
         commSelect.style.display = "block";
-
         senegalMap[region][dept].forEach(commune => {
             let opt = document.createElement("option");
             opt.value = commune;
@@ -349,3 +301,17 @@ function chargerCommunes() {
         });
     }
 }
+
+// ==========================================
+// 9. INITIALISATION AU DÉMARRAGE
+// ==========================================
+window.onload = () => {
+    filtrerProduits('Tous');
+    
+    const searchInput = document.getElementById('search-input') || document.querySelector('.nav-search-input');
+    if (searchInput) {
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') executerRecherche();
+        });
+    }
+};
