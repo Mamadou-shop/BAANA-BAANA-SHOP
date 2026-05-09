@@ -720,12 +720,20 @@ nav a:hover {
 /* LA BARRE DE RECHERCHE */
 .nav-search {
     display: flex;
-    flex: 1; /* C'est ce paramètre qui permet à la barre de s'étirer au milieu */
+    width: 50%;           /* Elle prendra la moitié de l'écran (ajuste à 40% si tu la veux plus petite) */
+    margin: 0 auto;       /* Le "auto" permet de la centrer parfaitement au milieu */
     height: 40px;
-    margin: 0 15px; /* Un petit espace pour ne pas étouffer l'adresse à gauche */
     background-color: white;
     border-radius: 4px;
-    overflow: hidden; /* Pour que le bouton loupe orange ne dépasse pas */
+    overflow: hidden;
+    border: 2px solid transparent; /* Pour préparer un effet de focus propre */
+}
+
+/* Optionnel : Ajustement pour que les éléments autour ne soient pas trop serrés */
+.nav-main {
+    display: flex;
+    justify-content: space-between; /* Aligne le logo à gauche, la recherche au centre, le panier à droite */
+    align-items: center;
 }
 
 .nav-search-categories {
