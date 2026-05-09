@@ -1070,3 +1070,29 @@ nav a:hover {
     color: white;
     cursor: pointer;
 }
+
+
+/* Style de la barre principale (Ligne 1) */
+.nav-main {
+    background-color: #131921;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0 15px;
+    height: 65px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nav-right-items {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 15px;
+}
+
+.nav-right-items div {
+    display: flex;
+    flex-direction: column;
+}
