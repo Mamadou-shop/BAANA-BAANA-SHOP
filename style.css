@@ -716,11 +716,16 @@ nav a:hover {
 /* Adresse livraison */
 .nav-delivery { display: flex; align-items: center; cursor: pointer; margin-right: 20px; }
 .nav-delivery i { font-size: 18px; margin-right: 5px; margin-top: 10px; }
-
+.nav-delivery {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    cursor: pointer;
+}
 /* LA BARRE DE RECHERCHE */
 .nav-search {
     display: flex;
-    width: 40%;           /* Elle prendra la moitié de l'écran (ajuste à 40% si tu la veux plus petite) */
+    width: 30%;           /* Elle prendra la moitié de l'écran (ajuste à 20% si tu la veux plus petite) */
     margin: 0 auto;       /* Le "auto" permet de la centrer parfaitement au milieu */
     height: 40px;
     background-color: white;
@@ -1201,4 +1206,15 @@ nav a:hover {
     font-weight: bold;
     cursor: pointer;
     border-radius: 4px;
+}
+
+
+
+
+.nav-signin, .nav-return, .nav-cart, .nav-language {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px; /* Espace régulier entre chaque bloc */
+    cursor: pointer;
 }
