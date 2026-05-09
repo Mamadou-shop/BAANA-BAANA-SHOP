@@ -714,26 +714,23 @@ nav a:hover {
 .nav-logo span { color: #febd69; }
 
 /* Adresse livraison */
-.nav-delivery { display: flex; align-items: center; cursor: pointer; margin-right: 20px; }
-.nav-delivery i { font-size: 18px; margin-right: 5px; margin-top: 10px; }
 .nav-delivery {
     display: flex;
     align-items: center;
+    color: white;
     margin-left: 15px;
-    cursor: pointer;
+}
 }
 /* LA BARRE DE RECHERCHE */
 .nav-search {
     display: flex;
-    width: 30%;           /* Elle prendra la moitié de l'écran (ajuste à 20% si tu la veux plus petite) */
-    margin: 0 auto;       /* Le "auto" permet de la centrer parfaitement au milieu */
+    width: 30% !important; /* Ta demande spécifique */
     height: 40px;
     background-color: white;
     border-radius: 4px;
     overflow: hidden;
-    border: 2px solid transparent; /* Pour préparer un effet de focus propre */
+    margin: 0 10px; /* Petit espace de sécurité */
 }
-
 /* Optionnel : Ajustement pour que les éléments autour ne soient pas trop serrés */
 .nav-main {
     display: flex;
@@ -1211,10 +1208,16 @@ nav a:hover {
 
 
 
-.nav-signin, .nav-return, .nav-cart, .nav-language {
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espace régulier entre le drapeau, le compte et le panier */
+}
+
+/* On s'assure que chaque petit bloc est bien aligné */
+.nav-language, .nav-signin, .nav-return, .nav-cart {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-left: 15px; /* Espace régulier entre chaque bloc */
+    color: white;
     cursor: pointer;
 }
