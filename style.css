@@ -170,25 +170,36 @@ body {
 .nav-bold { font-weight: bold; }
 
 /* --- 4. CATEGORIES BAR & DELIVERY PICKER --- */
+/* --- 4. CATEGORIES BAR (Style Publicité Premium) --- */
 .nav-categories-bar {
-    background: white;
-    border-bottom: 1px solid #ddd;
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 10px;
+    align-items: center;
+    gap: 25px; /* Espace équilibré entre les liens */
+    padding: 12px 0;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Ombre légère pour le relief */
     overflow-x: auto;
-}
-
-.nav-categories-bar a {
-    color: #555;
-    text-decoration: none;
-    font-size: 14px;
     white-space: nowrap;
 }
 
-.nav-categories-bar a:hover { color: #f08804; }
+.nav-categories-bar a {
+    color: #444;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 12px;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
 
+/* Effet au survol : changement de couleur et légère élévation */
+.nav-categories-bar a:hover {
+    color: #f08804; /* Orange Amazon */
+    background-color: #fff8f2; /* Fond très léger pour l'effet bouton */
+    transform: translateY(-1px);
+}
 /* --- 5. GRILLE DE PRODUITS --- */
 .product-grid {
     display: grid;
