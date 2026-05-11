@@ -67,11 +67,15 @@ body {
 
 /* RECHERCHE */
 .nav-search {
-    flex-grow: 1;
     display: flex;
+    flex-grow: 1; 
+    flex-shrink: 1; /* Permet de s'adapter si l'écran est petit */
+    flex-basis: auto; 
+    margin: 0 15px; /* Ajoute cette marge pour décoller du logo et du panier */
     height: 40px;
     border-radius: 4px;
     overflow: hidden;
+    background-color: white; /* Assure-toi que le fond est bien blanc */
 }
 
 .nav-search-select {
