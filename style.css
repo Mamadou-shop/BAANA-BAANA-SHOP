@@ -318,26 +318,33 @@ body {
     mask-image: linear-gradient(to right, rgba(0,0,0,1) 40%, rgba(0,0,0,0.8) 100%);
 }
 
+/* Ligne 326 modifiée */
 .slide-text {
     position: absolute;
     top: 50%;
     left: 8%;
     transform: translateY(-50%);
-    color: #111; /* Texte sombre pour contraster sur le fond clair */
+    color: #ffffff; /* BLANC au lieu de #111 */
     z-index: 10;
     max-width: 450px;
 }
 
+/* Ligne 331 modifiée */
 .slide-text h2 {
     font-size: 42px;
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 15px;
+    color: #ffffff; /* BLANC */
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8); /* L'ombre pour décoller du fond */
 }
 
+/* Ligne 338 modifiée */
 .slide-text p {
     font-size: 18px;
     margin-bottom: 25px;
+    color: #ffffff; /* BLANC */
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
 }
 
 /* Bouton dans la publicité */
