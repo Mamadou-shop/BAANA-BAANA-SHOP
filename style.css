@@ -416,3 +416,30 @@ body {
     color: black;
     background-color: white;
 }
+
+
+
+
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: fit-content;
+}
+
+.nav-line-2-select {
+    background: transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    max-width: 120px; /* Limite la largeur pour ne pas pousser la recherche */
+}
+
+.nav-line-2-select option {
+    background-color: #232f3e;
+    color: white;
+}
