@@ -151,13 +151,20 @@ function moveSlide(n) {
     if (!slidesContainer || allSlides.length === 0) return;
 
     slideIndex += n;
+    
+    // Gestion de la boucle (retour au début ou à la fin)
     if (slideIndex >= allSlides.length) slideIndex = 0;
     if (slideIndex < 0) slideIndex = allSlides.length - 1;
 
+    // ATTENTION : Utilise bien les accents graves ` ici
     slidesContainer.style.transform = `translateX(${-slideIndex * 100}%)`;
 }
 
-function autoSlider() { moveSlide(1); }
+function autoSlider() { 
+    moveSlide(1); 
+}
+
+// Défilement automatique toutes les 5 secondes
 setInterval(autoSlider, 5000);
 
 // ==========================================
