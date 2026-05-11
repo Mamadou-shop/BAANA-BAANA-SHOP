@@ -92,6 +92,7 @@ body {
     border: none;
     padding: 0 10px;
     outline: none;
+    font-size: 13px; /* On descend d'un pixel pour gagner de la place */
 }
 
 .nav-search-btn {
