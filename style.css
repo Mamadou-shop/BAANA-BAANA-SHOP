@@ -169,6 +169,14 @@ body {
     font-weight: bold;
     cursor: pointer;
     padding: 5px;
+}   .nav-sub-left:hover {
+    outline: 1px solid white; /* Crée un petit cadre blanc précis */
+    border-radius: 2px;
+}
+
+/* Pour s'assurer que l'icône et le texte ne bougent pas au survol */
+.nav-sub-left i {
+    font-size: 18px;
 }
 
 .nav-sub-links { display: flex; gap: 15px; margin-left: 10px; }
