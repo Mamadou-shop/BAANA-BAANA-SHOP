@@ -22,11 +22,11 @@ body {
 .nav-main {
     background-color: #131921;
     color: white;
-    padding: 10px 20px;
+    padding: 5px 15px; /* On réduit un peu la hauteur et l'espace latéral */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 10px; /* On réduit l'espace entre les blocs pour gagner de la place */
 }
 
 .nav-left {
@@ -69,13 +69,14 @@ body {
 .nav-search {
     display: flex;
     flex-grow: 1; 
-    flex-shrink: 1; /* Permet de s'adapter si l'écran est petit */
-    flex-basis: auto; 
-    margin: 0 15px; /* Ajoute cette marge pour décoller du logo et du panier */
+    flex-shrink: 0; /* Empêche la barre de rétrécir */
+    flex-basis: auto;
+    min-width: 450px; /* <--- C'EST CETTE LIGNE QUI VA TOUT RÉGLER */
+    margin: 0 15px;
     height: 40px;
     border-radius: 4px;
     overflow: hidden;
-    background-color: white; /* Assure-toi que le fond est bien blanc */
+    background-color: white;
 }
 
 .nav-search-select {
@@ -90,9 +91,10 @@ body {
 .nav-search-input {
     flex-grow: 1;
     border: none;
-    padding: 0 10px;
+    padding: 0 15px;
     outline: none;
-    font-size: 13px; /* On descend d'un pixel pour gagner de la place */
+    font-size: 14px; /* On descend d'un pixel pour gagner de la place */
+    width:100%
 }
 
 .nav-search-btn {
