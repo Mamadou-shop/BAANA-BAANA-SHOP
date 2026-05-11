@@ -79,6 +79,28 @@
         </div>
     </div>
 </header>
+    <div class="hero-slider">
+    <div class="slides">
+        <div class="slide active">
+            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1200" alt="Promo High-Tech">
+            <div class="slide-text">
+                <h2>Économisez jusqu'à 40%</h2>
+                <p>Sur tous les appareils High-Tech & Accessoires</p>
+                <a href="#" class="btn-slider" onclick="filtrerProduits('Equipement')">Découvrir maintenant</a>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1200" alt="Nouvelle Collection">
+            <div class="slide-text">
+                <h2>Le savoir-faire livré chez vous</h2>
+                <p>Découvrez la nouvelle collection Textile & Mode</p>
+                <a href="#" class="btn-slider" onclick="filtrerProduits('Textile-Mode')">Voir la collection</a>
+            </div>
+        </div>
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+</div>
 
 <div class="delivery-picker" style="background: #232f3e; padding: 10px; display: flex; justify-content: center; gap: 15px; border-top: 1px solid #444;">
     <div style="display: flex; align-items: center; gap: 8px;">
