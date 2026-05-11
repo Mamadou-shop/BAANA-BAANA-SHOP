@@ -12,18 +12,19 @@
 
 <header>
     <div class="nav-main">
-        <div class="nav-left">
-            <div class="nav-logo">
-                <a href="#">Doux-Doux<span>.sn</span></a>
-            </div>
-            <div class="nav-delivery">
-                <i class="fas fa-map-marker-alt"></i>
-                <div class="nav-text">
-                    <span class="nav-line-1">Livrer à</span>
-                    <span class="nav-line-2" id="display-location">Dakar</span>
-                </div>
-            </div>
+       <div class="nav-left">
+    <div class="nav-logo">
+        <a href="#">Doux-Doux<span>.sn</span></a>
+    </div>
+    
+    <div class="nav-delivery" onclick="document.getElementById('select-region').focus()">
+        <i class="fas fa-map-marker-alt"></i>
+        <div class="nav-text">
+            <span class="nav-line-1">Votre adresse de livraison :</span>
+            <span class="nav-line-2" id="display-location">Sénégal</span>
         </div>
+    </div>
+</div>
 
         <div class="nav-search">
             <select class="nav-search-select" id="search-category" onchange="filtrerProduits(this.value)">
