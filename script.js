@@ -276,12 +276,18 @@ function chargerDepartements() {
     const region = document.getElementById('select-region').value;
     const deptSelect = document.getElementById('select-departement');
     const commSelect = document.getElementById('select-commune');
-    
+
+    // 1. Mise à jour du texte dans le header (Nouveau !)
+    if(region) {
+        document.getElementById('display-location').innerText = region;
+    }
+
+    // 2. Logique pour charger les départements (Ton code existant)
     deptSelect.innerHTML = '<option value="">-- Département --</option>';
     commSelect.innerHTML = '<option value="">-- Commune --</option>';
 
     if (region && senegalMap[region]) {
-        deptSelect.style.display = "block";
+        deptSelect.style.display = "inline-block"; // Affiche le menu
         for (let dept in senegalMap[region]) {
             let opt = document.createElement("option");
             opt.value = dept;
