@@ -356,3 +356,44 @@ body {
 .btn-slider:hover {
     background-color: #f7ca00;
 }
+
+
+
+
+
+
+/*pour la localisation */
+/* AJOUTER TOUT EN BAS DU FICHIER STYLE.CSS */
+
+.nav-delivery {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 2px;
+}
+
+.nav-delivery:hover {
+    border: 1px solid #ffffff; /* Le cadre blanc Amazon au survol */
+}
+
+.nav-delivery i {
+    font-size: 18px;
+    margin-top: 5px;
+    color: #ffffff;
+}
+
+.nav-delivery .nav-line-1 {
+    font-size: 12px;
+    color: #ccc;
+    white-space: nowrap;
+}
+
+.nav-delivery .nav-line-2 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+}
