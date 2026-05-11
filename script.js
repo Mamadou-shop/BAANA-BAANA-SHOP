@@ -331,3 +331,15 @@ window.onload = () => {
         });
     }
 };
+
+
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "350px";
+    document.getElementById("side-overlay").style.display = "block";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("side-overlay").style.display = "none";
+}
