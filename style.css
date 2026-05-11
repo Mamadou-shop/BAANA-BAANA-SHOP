@@ -286,3 +286,73 @@ body {
     .nav-sub-links { display: none; }
     .product-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+
+
+
+/*pour les images de publicité */
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Hauteur identique à Amazon */
+    overflow: hidden;
+    background-color: #f3f3f3;
+}
+
+.slides {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Effet de dégradé pour que le texte soit lisible à gauche */
+    mask-image: linear-gradient(to right, rgba(0,0,0,1) 40%, rgba(0,0,0,0.8) 100%);
+}
+
+.slide-text {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    color: #111; /* Texte sombre pour contraster sur le fond clair */
+    z-index: 10;
+    max-width: 450px;
+}
+
+.slide-text h2 {
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.slide-text p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Bouton dans la publicité */
+.btn-slider {
+    display: inline-block;
+    background-color: #ffd814;
+    color: #111;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background 0.3s;
+}
+
+.btn-slider:hover {
+    background-color: #f7ca00;
+}
