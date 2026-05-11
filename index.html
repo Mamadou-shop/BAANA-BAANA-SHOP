@@ -21,7 +21,14 @@
     <div style="display: flex; align-items: center; gap: 8px;">
         <i class="fas fa-map-marker-alt" style="color: #febd69;"></i>
         <select id="select-region" onchange="chargerDepartements()" style="padding: 8px; border-radius: 5px; border: 1px solid #ccc; background: white; cursor: pointer; font-family: 'Poppins', sans-serif;">
-            <option value="">-- Choisir une Région --</option>
+            <div class="nav-text">
+    <span class="nav-line-1">Votre adresse de livraison :</span>
+    <div class="nav-line-2-container" style="display: flex; align-items: center; gap: 5px;">
+        <select id="select-region" onchange="chargerDepartements()" class="nav-line-2-select">
+        <select id="select-departement" onchange="chargerCommunes()" style="display:none; background: white; color: black; border-radius: 3px; font-size: 12px;"></select>
+        <select id="select-commune" style="display:none; background: white; color: black; border-radius: 3px; font-size: 12px;"></select>
+    </div>
+</div><option value="">-- Choisir une Région --</option>
             <option value="Dakar">Dakar</option>
             <option value="Thiès">Thiès</option>
             <option value="Diourbel">Diourbel</option>
@@ -38,6 +45,7 @@
             <option value="Kédougou">Kédougou</option>
         </select>
     </div>
+          
 
     <select id="select-departement" onchange="chargerCommunes()" style="display:none; padding: 8px; border-radius: 5px; border: 1px solid #ccc; font-family: 'Poppins', sans-serif;"></select>
     
