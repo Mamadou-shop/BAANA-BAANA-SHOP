@@ -443,3 +443,14 @@ body {
     background-color: #232f3e;
     color: white;
 }
+
+
+#select-departement, #select-commune {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 2px;
+    vertical-align: middle;
+}
