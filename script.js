@@ -277,14 +277,14 @@ function chargerDepartements() {
     const deptSelect = document.getElementById('select-departement');
     const commSelect = document.getElementById('select-commune');
 
-    // On réinitialise
+    // Réinitialisation
     deptSelect.innerHTML = '<option value="">-- Département --</option>';
     commSelect.innerHTML = '<option value="">-- Commune --</option>';
+    commSelect.style.display = "none";
 
     if (region && senegalMap[region]) {
-        // RENDRE LE MENU VISIBLE
+        // IMPORTANT : Affiche le menu des départements
         deptSelect.style.display = "inline-block"; 
-        deptSelect.style.marginLeft = "5px"; // Un peu d'espace
         
         for (let dept in senegalMap[region]) {
             let opt = document.createElement("option");
@@ -296,26 +296,28 @@ function chargerDepartements() {
         deptSelect.style.display = "none";
     }
 }
-}
 
 function chargerCommunes() {
     const region = document.getElementById('select-region').value;
     const dept = document.getElementById('select-departement').value;
     const commSelect = document.getElementById('select-commune');
-    
+
     commSelect.innerHTML = '<option value="">-- Commune --</option>';
 
     if (dept && senegalMap[region][dept]) {
-        commSelect.style.display = "block";
+        // IMPORTANT : Affiche le menu des communes
+        commSelect.style.display = "inline-block";
+        
         senegalMap[region][dept].forEach(commune => {
             let opt = document.createElement("option");
             opt.value = commune;
             opt.textContent = commune;
             commSelect.appendChild(opt);
         });
+    } else {
+        commSelect.style.display = "none";
     }
 }
-
 // ==========================================
 // 9. INITIALISATION AU DÉMARRAGE
 // ==========================================
