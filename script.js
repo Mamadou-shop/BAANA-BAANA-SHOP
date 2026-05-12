@@ -139,7 +139,7 @@ function executerRecherche() {
                     <button class="btn-add-cart" onclick="ajouterAuPanier('${p.titre}', '${p.prix}')">Ajouter</button>
                 </div>
             </div>`;
-    });
+    });   
 }
 
 // ==========================================
