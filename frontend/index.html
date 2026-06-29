@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doux-Doux | Boutique E-commerce Sénégal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<div id="side-overlay" onclick="closeNav()"></div>
+
+<div id="mySidenav" class="sidenav">
+    <div class="sidenav-header">
+        <i class="fas fa-user-circle"></i> Bonjour, Identifiez-vous
+        <span class="closebtn" onclick="closeNav()">&times;</span>
+    </div>
+
+    <div class="sidenav-content">
+        <h3>Tendances</h3>
+        <a href="#">Meilleures ventes</a>
+        <a href="#">Dernières Nouveautés</a>
+        <hr>
+        
+        <h3>Catégories Doux-Doux</h3>
+        <a href="#" onclick="filtrerProduits('Marche-Frais'); closeNav()">Marché Frais <i class="fas fa-chevron-right"></i></a>
+        <a href="#" onclick="filtrerProduits('Alimentation'); closeNav()">Épicerie <i class="fas fa-chevron-right"></i></a>
+        <a href="#" onclick="filtrerProduits('Textile-Mode'); closeNav()">Textile & Mode <i class="fas fa-chevron-right"></i></a>
+        <a href="#" onclick="filtrerProduits('Equipement'); closeNav()">Équipement <i class="fas fa-chevron-right"></i></a>
+        <hr>
+
+        <h3>Aide et paramètres</h3>
+        <a href="#">Votre compte</a>
+        <a href="#">🇸🇳 Sénégal</a>
+        <a href="#">Se connecter</a>
+    </div>
+</div>
+
+<header>
+    <div class="nav-main">
+        <div class="nav-left">
+            <div class="nav-logo">
+                <a href="#">Doux-Doux<span>.sn</span></a>
+            </div>
+        </div>
+   
+        <div class="nav-search">
+            <select class="nav-search-select" id="search-category" onchange="filtrerProduits(this.value)">
+                <option value="Toutes">Toutes nos catégories</option>
+                <option value="Marche-Frais">Marché Frais</option>
+                <option value="Alimentation">Épicerie</option>
+                <option value="Textile-Mode">Mode</option>
+                <option value="Equipement">Équipement & Maison</option>
+                <option value="BTP-Energie">BTP & Solaire</option>
+            </select>
+            <input type="text" id="searchInput" class="nav-search-input" placeholder="Rechercher sur Doux-Doux.sn">
+            <button class="nav-search-btn" onclick="searchProducts()">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+
+        <div class="nav-right">
+            <div class="nav-language">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Flag_of_Senegal.svg" class="nav-flag" alt="Sénégal">
+                <span>SN</span>
+            </div>
+            <div class="nav-account">
+                <span class="nav-line-1">Bonjour, Identifiez-vous</span>
+                <span class="nav-line-2">Compte et listes <i class="fas fa-caret-down"></i></span>
+            </div>
+            <div class="nav-orders">
+                <span class="nav-line-1">Retours</span>
+                <span class="nav-line-2">et Commandes</span>
+            </div>
+            <div class="nav-cart" onclick="window.location.href='#product-grid'">
+                <div class="cart-icon-container">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cartCount">0</span>
+                </div>
+                <span class="nav-line-2">Panier</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-sub">
+        <div class="nav-sub-left" onclick="openNav()">
+            <i class="fas fa-bars"></i>
+            <span>Toutes</span>
+        </div>
+        <div class="nav-sub-links">
+            <a href="#" class="nav-bold">Doux-Doux Haul</a>
+            <a href="#">Meilleures ventes</a>
+            <a href="#">Ventes Flash</a>
+            <a href="#">Dernières Nouveautés</a>
+            <a href="#">Doux-Doux Basics</a>
+            <a href="#">Vendre sur Doux-Doux</a>
+            <a href="#">Guide de l'acheteur</a>
+        </div>
+    </div>
+</header>
+
+<div class="hero-slider">
+    <div class="slides">
+        <div class="slide active">
+            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1200" alt="Promo High-Tech">
+            <div class="slide-text">
+                <h2>Économisez jusqu'à 40%</h2>
+                <p>Sur tous les appareils High-Tech & Accessoires</p>
+                <a href="#" class="btn-slider" onclick="filtrerProduits('Equipement')">Découvrir maintenant</a>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1200" alt="Nouvelle Collection">
+            <div class="slide-text">
+                <h2>Le savoir-faire livré chez vous</h2>
+                <p>Découvrez la nouvelle collection Textile & Mode</p>
+                <a href="#" class="btn-slider" onclick="filtrerProduits('Textile-Mode')">Voir la collection</a>
+            </div>
+        </div>
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+</div>
+
+<div class="nav-categories-bar">
+    <a href="#" onclick="filtrerProduits('Toutes')">Tout voir</a>
+    <a href="#" onclick="filtrerProduits('Marche-Frais')">Marché Frais</a>
+    <a href="#" onclick="filtrerProduits('Alimentation')">Épicerie</a>
+    <a href="#" onclick="filtrerProduits('Textile-Mode')">Textile & Mode</a>
+    <a href="#" onclick="filtrerProduits('Equipement')">Équipement & Maison</a>
+    <a href="#" onclick="filtrerProduits('BTP-Energie')">BTP & Solaire</a>
+</div>
+
+<main class="container">
+    <div id="productGrid" class="product-grid">
+        </div>
+</main>
+
+<div id="payment-modal" class="modal">
+    <div class="modal-content" style="max-width: 450px;">
+        <span class="close-modal" onclick="closePayment()">&times;</span>
+        <h2>Finaliser votre commande</h2>
+        <p style="margin-bottom: 15px;">Produit : <strong id="modal-product-name">Nom du produit</strong></p>
+        
+        <h3 style="font-size: 15px; margin-bottom: 10px; color: #333;"><i class="fas fa-truck"></i> Zone de livraison :</h3>
+        <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
+            <select id="select-region" onchange="chargerDepartements()" style="padding: 10px; width: 100%; border: 1px solid #ddd; border-radius: 4px;">
+                <option value="">-- Choisir une Région --</option>
+                <option value="Dakar">Dakar</option>
+                <option value="Thiès">Thiès</option>
+                <option value="Diourbel">Diourbel</option>
+                <option value="Saint-Louis">Saint-Louis</option>
+                <option value="Fatick">Fatick</option>
+                <option value="Kaolack">Kaolack</option>
+                <option value="Ziguinchor">Ziguinchor</option>
+                <option value="Louga">Louga</option>
+                <option value="Tambacounda">Tambacounda</option>
+                <option value="Matam">Matam</option>
+                <option value="Kolda">Kolda</option>
+                <option value="Kaffrine">Kaffrine</option>
+                <option value="Sédhiou">Sédhiou</option>
+                <option value="Kédougou">Kédougou</option>
+            </select>
+
+            <select id="select-departement" onchange="chargerCommunes()" style="padding: 10px; width: 100%; border: 1px solid #ddd; border-radius: 4px; display: none;">
+                <option value="">-- Département --</option>
+            </select>
+
+            <select id="select-commune" style="padding: 10px; width: 100%; border: 1px solid #ddd; border-radius: 4px; display: none;">
+                <option value="">-- Commune --</option>
+            </select>
+        </div>
+
+        <h3 style="font-size: 15px; margin-bottom: 10px; color: #333;"><i class="fas fa-credit-card"></i> Moyen de paiement :</h3>
+       <div class="payment-options">
+    <!-- Lien de paiement officiel Wave Business configuré pour Doux-Doux -->
+    <a href="https://pay.wave.com/m/M_sn_oPpmOm67pxb4/c/sn/" class="btn-pay btn-wave" target="_blank">
+        📱 Payer avec Wave (Mobile)
+    </a>
+    <a href="tel:#144#39#777226359#" class="btn-pay btn-om">
+        📞 Lancer le code Orange Money (Mobile)
+    </a>
+    
+    <!-- Instructions claires pour les clients sur Ordinateur -->
+    <div class="instructions-pc" style="background-color: #f7f9fa; border: 1px dashed #ccc; border-radius: 5px; padding: 10px; margin-top: 15px; font-size: 13px; color: #333; text-align: left; line-height: 1.4;">
+        <p>💡 <strong>Sur ordinateur ?</strong></p>
+        <p>Effectuez le transfert vers <strong>Doux-Doux</strong> au <strong>77 722 63 59</strong> (Wave ou Orange Money).</p>
+    </div>
+</div>
+
+        <hr style="margin: 20px 0; border: 0; border-top: 1px solid #eee;">
+        
+        <p style="font-size: 13px; color: #666; text-align: center;">Après le transfert, envoyez la capture de confirmation :</p>
+        <button class="whatsapp-btn" onclick="window.location.href='https://wa.me/221777226359'" style="width:100%; justify-content: center;">
+            <i class="fab fa-whatsapp"></i> Envoyer la preuve sur WhatsApp
+        </button>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Doux-Doux.sn | Tous droits réservés.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
