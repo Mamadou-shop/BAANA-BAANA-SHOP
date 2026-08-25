@@ -1,15 +1,18 @@
+require("dotenv").config(); //  À mettre impérativement à la ligne 1 !
 const express = require("express");
 const cors = require("cors");
-const dotenv = require("dotenv");
-const connectDB = require("./config/db");
-
-dotenv.config();
-connectDB();
+const mongoose = require("mongoose");
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
+
+console.log("URI utilisée :", process.env.MONGO_URI);
+
+mongoose.connect(process.env.MONGO_URI)
+    .then(() => console.log("✅ MongoDB connecté"))
+    .catch(err => console.error("❌ Erreur MongoDB :", err));
 
 app.get("/", (req, res) => {
   res.send("API Doux-Doux en ligne et fonctionnelle");
