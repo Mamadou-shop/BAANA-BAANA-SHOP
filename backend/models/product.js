@@ -9,7 +9,11 @@ const productSchema = new mongoose.Schema(
     oldPrice: { type: Number, default: null },
     image: { type: String, required: false },
     stock: { type: Number, default: 0 },
-    rating: { type: Number, default: 0 }
+    rating: { type: Number, default: 0 },
+
+    // null = produit officiel Doux-Doux, sinon référence au vendeur
+    vendor: { type: mongoose.Schema.Types.ObjectId, ref: "User", default: null },
+    statut: { type: String, enum: ["en_attente", "validé", "refusé"], default: "validé" }
   },
   { timestamps: true }
 );
