@@ -39,5 +39,12 @@ const vendeurOnly = (req, res, next) => {
   }
 };
 
+const livreurOnly = (req, res, next) => {
+  if (req.user && req.user.role === "livreur") {
+    next();
+  } else {
+    res.status(403).json({ message: "Accès réservé aux livreurs" });
+  }
+};
 
-module.exports = { protect, adminOnly, vendeurOnly };
+module.exports = { protect, adminOnly, vendeurOnly, livreurOnly };
