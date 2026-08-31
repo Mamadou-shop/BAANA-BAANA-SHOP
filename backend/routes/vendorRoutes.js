@@ -1,4 +1,5 @@
 const express = require("express");
+const Order = require("../models/Order");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../models/user");
@@ -100,5 +101,35 @@ router.delete("/products/:id", protect, vendeurOnly, async (req, res) => {
     res.status(500).json({ message: "Erreur lors de la suppression" });
   }
 });
+
+
+// Statistiques de ventes du vendeur (uniquement ses produits)
+router.get("/stats", protect, vendeurOnly, async (req, res) => {
+  try {
+    const stats = await Order.aggregate([
+      { $match: { paymentStatus: "payé" } },
+      { $unwind: "$items" },
+      { $lookup: { from: "products", localField: "items.product", foreignField: "_id", as: "produitInfo" } },
+      { $unwind: "$produitInfo" },
+      { $match: { "produitInfo.vendor": req.user._id } },
+      {
+        $group: {
+          _id: "$produitInfo._id",
+          nom: { $first: "$produitInfo.name" },
+          quantiteVendue: { $sum: "$items.quantity" },
+          chiffreAffaires: { $sum: { $multiply: ["$items.quantity", "$items.price"] } }
+        }
+      },
+      { $sort: { chiffreAffaires: -1 } }
+    ]);
+
+    const chiffreAffairesTotal = stats.reduce((total, p) => total + p.chiffreAffaires, 0);
+
+    res.json({ chiffreAffairesTotal, parProduit: stats });
+  } catch (error) {
+    res.status(500).json({ message: "Erreur lors du calcul des statistiques", error: error.message });
+  }
+});
+
 
 module.exports = router;

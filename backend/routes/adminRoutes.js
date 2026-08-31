@@ -84,4 +84,47 @@ router.put("/produits/:id/refuser", protect, adminOnly, async (req, res) => {
   }
 });
 
+
+
+
+// Statistiques globales des ventes
+router.get("/stats/ventes", protect, adminOnly, async (req, res) => {
+  try {
+    const [totaux] = await Order.aggregate([
+      { $match: { paymentStatus: "payé" } },
+      { $group: { _id: null, totalCommandes: { $sum: 1 }, chiffreAffaires: { $sum: "$totalAmount" } } }
+    ]);
+
+    const topProduits = await Order.aggregate([
+      { $match: { paymentStatus: "payé" } },
+      { $unwind: "$items" },
+      { $group: { _id: "$items.product", quantiteVendue: { $sum: "$items.quantity" }, chiffreAffaires: { $sum: { $multiply: ["$items.quantity", "$items.price"] } } } },
+      { $sort: { quantiteVendue: -1 } },
+      { $limit: 10 },
+      { $lookup: { from: "products", localField: "_id", foreignField: "_id", as: "produit" } },
+      { $unwind: "$produit" }
+    ]);
+
+    const parVendeur = await Order.aggregate([
+      { $match: { paymentStatus: "payé" } },
+      { $unwind: "$items" },
+      { $lookup: { from: "products", localField: "items.product", foreignField: "_id", as: "produitInfo" } },
+      { $unwind: "$produitInfo" },
+      { $group: { _id: "$produitInfo.vendor", chiffreAffaires: { $sum: { $multiply: ["$items.quantity", "$items.price"] } }, quantiteVendue: { $sum: "$items.quantity" } } },
+      { $sort: { chiffreAffaires: -1 } },
+      { $lookup: { from: "users", localField: "_id", foreignField: "_id", as: "vendeurInfo" } }
+    ]);
+
+    res.json({
+      totalCommandes: totaux?.totalCommandes || 0,
+      chiffreAffaires: totaux?.chiffreAffaires || 0,
+      topProduits,
+      parVendeur
+    });
+  } catch (error) {
+    res.status(500).json({ message: "Erreur lors du calcul des statistiques", error: error.message });
+  }
+});
+
+
 module.exports = router;
